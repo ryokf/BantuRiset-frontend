@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-red{
+  @apply bg-gradient-to-b from-red-300 to-red-500
+}
+
+.gradient-orange{
+  @apply bg-gradient-to-b from-orange-300 to-orange-500
+} 
+
+.gradient-amber{
+  @apply bg-gradient-to-b from-amber-300 to-amber-500
+} 
+.gradient-yellow{
+  @apply bg-gradient-to-b from-yellow-300 to-yellow-500
+} 
+.gradient-lime{
+  @apply bg-gradient-to-b from-lime-300 to-lime-500
+} 
+.gradient-green{
+  @apply bg-gradient-to-b from-green-300 to-green-500
+} 
+.gradient-emerald{
+  @apply bg-gradient-to-b from-emerald-300 to-emerald-500
+} 
+.gradient-teal{
+  @apply bg-gradient-to-b from-teal-300 to-teal-500
+} 
+.gradient-cyan{
+  @apply bg-gradient-to-b from-cyan-300 to-cyan-500
+} 
+.gradient-sky{
+  @apply bg-gradient-to-b from-sky-300 to-sky-500
+} 
+.gradient-blue{
+  @apply bg-gradient-to-b from-blue-300 to-blue-500
+} 
+.gradient-indigo{
+  @apply bg-gradient-to-b from-indigo-300 to-indigo-500
+} 
+.gradient-voilet{
+  @apply bg-gradient-to-b from-voilet-300 to-voilet-500
+} 
+.gradient-purple{
+  @apply bg-gradient-to-b from-purple-300 to-purple-500
+} 
+.gradient-fuchsia{
+  @apply bg-gradient-to-b from-fuchsia-300 to-fuchsia-500
+} 
+.gradient-pink{
+  @apply bg-gradient-to-b from-pink-300 to-pink-500
+} 
+
+.gradient-rose{
+  @apply bg-gradient-to-b from-rose-300 to-rose-500
+} 
