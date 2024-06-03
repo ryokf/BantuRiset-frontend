@@ -40,8 +40,8 @@
 .gradient-indigo{
   @apply bg-gradient-to-b from-indigo-300 to-indigo-500
 } 
-.gradient-voilet{
-  @apply bg-gradient-to-b from-voilet-300 to-voilet-500
+.gradient-violet{
+  @apply bg-gradient-to-b from-violet-300 to-violet-500
 } 
 .gradient-purple{
   @apply bg-gradient-to-b from-purple-300 to-purple-500
