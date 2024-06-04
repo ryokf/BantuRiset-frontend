@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Roboto.woff2) format('woff2');
+  }
+}
+
 .gradient-red{
   @apply bg-gradient-to-b from-red-300 to-red-500
 }
@@ -52,7 +62,6 @@
 .gradient-pink{
   @apply bg-gradient-to-b from-pink-300 to-pink-500
 } 
-
 .gradient-rose{
   @apply bg-gradient-to-b from-rose-300 to-rose-500
 } 

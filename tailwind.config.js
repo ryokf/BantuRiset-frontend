@@ -10,14 +10,16 @@ export default {
     extend: {
       colors: {
         'primary':'#007aff',
-        'success': '##34c759',
-        'danger': '##FF3B30',
+        'success': '#34c759',
+        'danger': '#FF3B30',
         'warning': '#ff9500',
         'white': {
           DEFAULT: '#ffffff',
           'secondary': '#f2f2f7',
         },
-        'gray ': '#aeaeb2',
+        'gray' : {
+          DEFAULT: '#aeaeb2',
+        },
         'black' :'#333333',
       }
     },
