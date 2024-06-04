@@ -2,7 +2,7 @@
 "use client";
 
 import { Card as FlowbiteCard } from 'flowbite-react';
-import {cardTheme} from '../themes/CustomTheme';
+import {cardTheme} from '../themes/card';
 
 export function Card() {
     return (
