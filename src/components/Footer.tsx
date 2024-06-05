@@ -3,19 +3,22 @@
 
 import { Footer as FlowbiteFooter } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import footerTheme from "../themes/footer";
 
 export function Footer() {
     return (
-        <FlowbiteFooter container>
+        <FlowbiteFooter container theme={footerTheme}>
             <div className="w-full relative bottom-0">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-                    <div>
+                    <div className="flex my-4">
                         <FlowbiteFooter.Brand
                             href="https://flowbite.com"
-                            src="https://flowbite.com/docs/images/logo.svg"
+                            src="./logo.png"
                             alt="Flowbite Logo"
-                            name="Flowbite"
                         />
+                        <div className="">
+                            <h1 className="text-2xl font-bold">BantuRiset</h1>
+                        </div>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                         <div>
