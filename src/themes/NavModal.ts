@@ -34,7 +34,7 @@ const navModal: CustomFlowbiteTheme["modal"] = {
     content: {
         base: "relative h-full w-full p-4 md:h-auto bg-black/50 backdrop-blur-sm",
         inner:
-            "w-52 absolute bottom-[8rem] right-[1rem] flex flex-col rounded-xl bg-white/95 shadow dark:bg-gray-700",
+            "w-52 absolute bottom-[7rem] right-[1rem] flex flex-col rounded-xl bg-white/95 shadow dark:bg-gray-700",
     },
     body: {
         base: "flex-1 overflow-auto",

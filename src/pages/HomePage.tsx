@@ -84,9 +84,9 @@ const Popular = () => {
             </div>
             <div className="mx-4 my-10">
                 {
-                    [1, 2, 3, 4, 5, 6].map((item, index) => {
+                    [1, 2, 3, 4, 5, 6].map((item) => {
                         return (
-                            <div key={index} className="my-4">
+                            <div key={item} className="my-4">
                                 <Card></Card>
                             </div>
                         )

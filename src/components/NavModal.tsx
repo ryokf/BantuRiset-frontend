@@ -16,13 +16,13 @@ export function NavModal() {
             {
                 !openModal &&
                 <div className="md:hidden fixed z-50 bottom-10 right-5">
-                    <Button className="w-16 h-16 rounded-full flex justify-center items-center bg-primary" onClick={() => setOpenModal(true)}><IoMenu size={30} /></Button>
+                    <Button className="w-14 h-14 rounded-full flex justify-center items-center bg-primary" onClick={() => setOpenModal(true)}><IoMenu size={30} /></Button>
                 </div>
             }
             {
                 openModal &&
                 <div className="fixed z-[999] bottom-10 right-5">
-                    <Button className="w-16 h-16 rounded-full flex justify-center items-center bg-primary" onClick={() => setOpenModal(false)}><RxCross2 size={30} /></Button>
+                    <Button className="w-14 h-14 rounded-full flex justify-center items-center bg-primary" onClick={() => setOpenModal(false)}><RxCross2 size={30} /></Button>
                 </div>
             }
             <Modal
