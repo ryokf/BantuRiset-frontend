@@ -6,6 +6,9 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-
 import footerTheme from "../themes/footer";
 
 export function Footer() {
+    const today = new Date();
+    const year = today.getFullYear();
+
     return (
         <FlowbiteFooter container theme={footerTheme}>
             <div className="w-full relative bottom-0">
@@ -22,17 +25,18 @@ export function Footer() {
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                         <div>
-                            <FlowbiteFooter.Title title="about" />
+                            <FlowbiteFooter.Title title="menu" />
                             <FlowbiteFooter.LinkGroup col>
-                                <FlowbiteFooter.Link href="#">Flowbite</FlowbiteFooter.Link>
-                                <FlowbiteFooter.Link href="#">Tailwind CSS</FlowbiteFooter.Link>
+                                <FlowbiteFooter.Link href="#">dashboard</FlowbiteFooter.Link>
+                                <FlowbiteFooter.Link href="#">about</FlowbiteFooter.Link>
+                                <FlowbiteFooter.Link href="#">faq</FlowbiteFooter.Link>
                             </FlowbiteFooter.LinkGroup>
                         </div>
                         <div>
                             <FlowbiteFooter.Title title="Follow us" />
                             <FlowbiteFooter.LinkGroup col>
-                                <FlowbiteFooter.Link href="#">Github</FlowbiteFooter.Link>
-                                <FlowbiteFooter.Link href="#">Discord</FlowbiteFooter.Link>
+                                <FlowbiteFooter.Link href="#">Instagram</FlowbiteFooter.Link>
+                                <FlowbiteFooter.Link href="#">Twitter</FlowbiteFooter.Link>
                             </FlowbiteFooter.LinkGroup>
                         </div>
                         <div>
@@ -46,7 +50,7 @@ export function Footer() {
                 </div>
                 <FlowbiteFooter.Divider />
                 <div className="w-full sm:flex sm:items-center sm:justify-between">
-                    <FlowbiteFooter.Copyright href="#" by="Flowbite™" year={2022} />
+                    <FlowbiteFooter.Copyright href="#" by="BantuRiset™" year={year} />
                     <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                         <FlowbiteFooter.Icon href="#" icon={BsFacebook} />
                         <FlowbiteFooter.Icon href="#" icon={BsInstagram} />

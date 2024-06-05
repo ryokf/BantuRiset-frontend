@@ -1,51 +1,60 @@
+import { FaReact } from "react-icons/fa";
+import { MdOutlineScience } from "react-icons/md";
+import { TbDna2 } from "react-icons/tb";
+import { GoCpu } from "react-icons/go";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { MdCurrencyExchange } from "react-icons/md";
+import { FaRegSmile } from "react-icons/fa";
+import { IoIosColorPalette } from "react-icons/io";
+
 const category = [
     {
         id: 1,
         name: "Physics",
         link: "/category/physics",
-        icon: "./temporary/physics.svg",
+        icon: <FaReact size={30} />,
     },
     {
         id: 2,
         name: "Chemistry",
         link: "/category/chemistry",
-        icon: "./temporary/Flask_alt 1.svg",
+        icon: <MdOutlineScience size={30} />,
     },
     {
         id: 3,
         name: "Biology",
         link: "/category/biology",
-        icon: "./temporary/dna.svg",
+        icon: <TbDna2 size={30} />,
     },
     {
         id: 4,
         name: "Computer",
         link: "/category/computer",
-        icon: "./temporary/computer.svg",
+        icon: <GoCpu size={30} />,
     },
     {
         id: 5,
         name: "Social",
         link: "/category/computer",
-        icon: "./temporary/computer.svg",
+        icon: <FaPeopleGroup size={30} />,
     },
     {
         id: 6,
         name: "Economy",
         link: "/category/computer",
-        icon: "./temporary/computer.svg",
+        icon: <MdCurrencyExchange size={30} />,
     },
     {
         id: 7,
         name: "Psychology",
         link: "/category/computer",
-        icon: "./temporary/computer.svg",
+        icon: <FaRegSmile size={30} />,
     },
     {
         id: 8,
         name: "Art",
         link: "/category/computer",
-        icon: "./temporary/computer.svg",
+        icon: <IoIosColorPalette size={30} />,
     },
 ];
 

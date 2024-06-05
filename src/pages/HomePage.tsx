@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import HomeTemplate from '../templates/HomeTemplate';
 import { NavModal } from '../components/NavModal';
 import { FaBook } from 'react-icons/fa';
-import category from '../services/category';
+import category from '../data/category';
 import { Card } from '../components/Card';
 import ButtonNav from '../components/ButtonNav';
 
@@ -59,7 +59,7 @@ const Category = () => {
                             <div className="w-full flex justify-center">
                                 <div key={index} className={`w-20 aspect-square text-white rounded-xl flex justify-center items-center ${color[index]}`}>
                                     <div className="flex flex-col items-center gap-1">
-                                        <FaBook></FaBook>
+                                        {item.icon}
                                         <h1 className='text-xs font-medium'>{item.name}</h1>
                                     </div>
                                 </div>
