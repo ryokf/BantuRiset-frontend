@@ -15,13 +15,13 @@ export function NavModal() {
         <>
             {
                 !openModal &&
-                <div className="md:hidden absolute z-50 bottom-10 right-5">
+                <div className="md:hidden fixed z-50 bottom-10 right-5">
                     <Button className="w-16 h-16 rounded-full flex justify-center items-center bg-primary" onClick={() => setOpenModal(true)}><IoMenu size={30} /></Button>
                 </div>
             }
             {
                 openModal &&
-                <div className="absolute z-[999] bottom-10 right-5">
+                <div className="fixed z-[999] bottom-10 right-5">
                     <Button className="w-16 h-16 rounded-full flex justify-center items-center bg-primary" onClick={() => setOpenModal(false)}><RxCross2 size={30} /></Button>
                 </div>
             }

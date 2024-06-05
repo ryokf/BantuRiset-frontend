@@ -4,7 +4,7 @@ import { buttonTheme } from '../themes/button';
 
 const Button = ({children}: {children: React.ReactNode}) => {
     return (
-        <FlowbiteButton className='bg-primary rounded-full px-4' theme={buttonTheme}>{children}</FlowbiteButton>
+        <FlowbiteButton color={'primary'} className='rounded-full px-4' theme={buttonTheme}>{children}</FlowbiteButton>
     )
 }
 
