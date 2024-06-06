@@ -1,4 +1,3 @@
-import React from 'react'
 import { Checkbox, Label, TextInput } from "flowbite-react";
 import Button from '../components/Button';
 
