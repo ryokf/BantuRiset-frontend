@@ -3,10 +3,10 @@ import { VscChevronRight } from "react-icons/vsc";
 
 const ButtonNav = () => {
     return (
-        <div className='flex items-center text-primary'>
-            <div className="text-sm">Selengkapnya</div>
-            <div className=""><VscChevronRight /></div>
-        </div>
+        <a href='/category' className='flex items-center text-primary'>
+            <div className="text-sm lg:text-base">Selengkapnya</div>
+            <div><VscChevronRight className='lg:text-xl' /></div>
+        </a>
     )
 }
 

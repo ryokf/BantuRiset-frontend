@@ -11,7 +11,7 @@ export function Footer() {
 
     return (
         <FlowbiteFooter container theme={footerTheme}>
-            <div className="w-full relative bottom-0">
+            <div className="w-full relative bottom-0 lg:w-10/12 m-auto">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                     <div className="flex my-4">
                         <FlowbiteFooter.Brand
@@ -48,7 +48,7 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
-                <FlowbiteFooter.Divider />
+                <FlowbiteFooter.Divider  />
                 <div className="w-full sm:flex sm:items-center sm:justify-between">
                     <FlowbiteFooter.Copyright href="#" by="BantuRiset™" year={year} />
                     <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">

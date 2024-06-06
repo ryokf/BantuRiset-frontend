@@ -111,6 +111,7 @@ export const buttonTheme: CustomFlowbiteTheme["button"] = {
         sm: "px-3 py-1.5 text-sm",
         md: "px-4 py-2 text-sm",
         lg: "px-5 py-2.5 text-base",
-        xl: "px-6 py-3 text-base",
+        xl: "px-6 py-3 text-lg",
+        responsive: "px-4 py-2 text-sm lg:px-6 lg:py-3 lg:text-lg"
     },
 };

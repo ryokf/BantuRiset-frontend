@@ -7,7 +7,7 @@ import {cardTheme} from '../themes/card';
 export function Card() {
     return (
         <FlowbiteCard theme={cardTheme}
-            className="max-w-sm flex-col rounded-xl overflow-hidden"
+            className={`max-w-sm sm:max-w-md flex-col rounded-xl overflow-hidden`}
             renderImage={() => <img width={500} height={500} src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="image 1" />}
         >
             <div className="">

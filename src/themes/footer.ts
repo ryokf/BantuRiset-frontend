@@ -3,7 +3,7 @@ import { CustomFlowbiteTheme } from "flowbite-react";
 const footerTheme: CustomFlowbiteTheme["footer"] = {
     root: {
         "base": "w-full rounded-lg shadow dark:bg-gray-800 md:flex md:items-center md:justify-between bg-black text-white",
-        "container": "w-full p-6",
+        "container": "w-full p-6 ",
     },
     groupLink: {
         "base": "flex flex-wrap text-sm text-white",
@@ -20,7 +20,7 @@ const footerTheme: CustomFlowbiteTheme["footer"] = {
     "title": {
         "base": "mb-6 text-sm font-semibold uppercase text-white"
     },
-    "divider": {
+    divider: {
         "base": "my-6 w-full border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8"
     },
     "copyright": {

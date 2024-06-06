@@ -1,7 +1,7 @@
 
 "use client";
 
-import { Avatar, Dropdown, Navbar as FlowbiteNavbar } from "flowbite-react";
+import { Avatar,Navbar as FlowbiteNavbar } from "flowbite-react";
 import { nabarTheme } from "../themes/navbar";
 
 function Navbar() {
@@ -32,7 +32,7 @@ function Navbar() {
             </div>
             <FlowbiteNavbar.Collapse>
                 {link.map((link) => (
-                    <FlowbiteNavbar.Link key={link.name} href={link.href}>{link.name}</FlowbiteNavbar.Link>
+                    <FlowbiteNavbar.Link  key={link.name} href={link.href}>{link.name}</FlowbiteNavbar.Link>
                 ))}
             </FlowbiteNavbar.Collapse>
         </FlowbiteNavbar>
