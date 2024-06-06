@@ -35,9 +35,9 @@ export function NavModal() {
                 <Modal.Body>
                     <div className="space-y-6 p-6">
                         {
-                            navlink.map((item, index) => {
+                            navlink.map((item) => {
                                 return (
-                                    <div key={index} className="flex items-center gap-4">
+                                    <div key={item.color} className="flex items-center gap-4">
                                         <div className={`${item.color} w-10 h-10 rounded-xl flex justify-center items-center text-white`}>{item.icon}</div>
                                         <h1 className="text-xl">{item.name}</h1>
                                     </div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { VscChevronRight } from "react-icons/vsc";
 
 const ButtonNav = () => {

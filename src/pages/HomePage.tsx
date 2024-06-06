@@ -1,8 +1,6 @@
-import React from 'react'
 import Button from '../components/Button';
 import HomeTemplate from '../templates/HomeTemplate';
 import { NavModal } from '../components/NavModal';
-import { FaBook } from 'react-icons/fa';
 import category from '../data/category';
 import { Card } from '../components/Card';
 import ButtonNav from '../components/ButtonNav';
