@@ -30,7 +30,7 @@ const footerTheme: CustomFlowbiteTheme["footer"] = {
     },
     brand: {
         "base": "mb-4 flex items-center sm:mb-0 text-white",
-        "img": "mr-3 h-8",
+        "img": "mr-3 h-8 text-white",
         "span": "self-center whitespace-nowrap text-2xl font-semibold text-white"
     }
 }

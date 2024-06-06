@@ -12,7 +12,7 @@ const HomePage = () => {
         <HomeTemplate>
             <NavModal></NavModal>
             <Hero></Hero>
-            <hr className='border-4 mb-10 w-full' />
+            <hr className='border-4 mb-10 w-full md:hidden' />
             <Category></Category>
             <hr className='border-4 my-10 w-full' />
             <Popular></Popular>
@@ -22,13 +22,15 @@ const HomePage = () => {
 
 const Hero = () => {
     return (
-        <div className='mx-8'>
-            <p className='text-primary mt-10'>#banturiset</p>
-            <h1 className='text-3xl font-bold my-2'>Wujudkan Inovasi, Majukan Negeri</h1>
-            <p className='text-gray mb-4'>Membantu memajukan teknologi sekarang lebih mudah bersama kami </p>
-            <Button>Donasi Sekarang</Button>
-            <div className="my-10">
-                <img src="./hero.png" alt="" />
+        <div className='mx-8 sm:mx-12 md:grid grid-cols-2 lg:mx-60'>
+            <div className="sm:max-w-md lg:max-w-full lg:my-20">
+                <p className='text-primary mt-10 sm:text-lg md:text-base lg:text-xl'>#banturiset</p>
+                <h1 className='text-3xl sm:text-4xl font-bold my-2 md:text-3xl lg:text-6xl lg:leading-snug lg:mb-4'>Wujudkan Inovasi, Majukan Negeri</h1>
+                <p className='text-gray sm:text-lg mb-4 md:text-base lg:text-2xl lg:font-light'>Membantu memajukan teknologi sekarang lebih mudah bersama kami </p>
+                <Button>Donasi Sekarang</Button>
+            </div>
+            <div className="my-10 flex justify-center lg:justify-end">
+                <img src="./hero.png" alt="" className='sm:max-w-md md:w-80 lg:w-full aspect-square' />
             </div>
         </div>
     )
