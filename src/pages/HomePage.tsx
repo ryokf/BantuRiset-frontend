@@ -58,10 +58,12 @@ const Category = () => {
                 {
                     category.map((item, index) => {
                         return (
-                            <a href={item.link} key={item.link} className="w-full flex justify-center">
+                            <a href={`/category/${item.id}`} key={item.id} className="w-full flex justify-center">
                                 <div className={`w-20 lg:w-28 aspect-square text-white rounded-xl flex justify-center items-center ${color[index]}`}>
                                     <div className="flex flex-col items-center gap-1">
-                                        {item.icon}
+                                        <div className="w-[30px]">
+                                            {item.icon}
+                                        </div>
                                         <h1 className='text-xs lg:text-base font-medium'>{item.name}</h1>
                                     </div>
                                 </div>

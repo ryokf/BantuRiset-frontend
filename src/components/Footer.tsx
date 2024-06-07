@@ -15,8 +15,8 @@ export function Footer() {
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                     <div className="flex my-4">
                         <FlowbiteFooter.Brand
-                            href="https://flowbite.com"
-                            src="./logo.png"
+                            href="https://banturiset.vercel.app"
+                            src="/logo.png"
                             alt="Flowbite Logo"
                         />
                         <div className="">
