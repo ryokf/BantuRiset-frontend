@@ -4,6 +4,7 @@
 import { Avatar, Navbar as FlowbiteNavbar } from "flowbite-react";
 import { nabarTheme } from "../themes/navbar";
 import Button from './Button';
+import { FaUser } from "react-icons/fa";
 
 function Navbar() {
 
@@ -32,7 +33,7 @@ function Navbar() {
                 {
                     localStorage.getItem("token")
                         ? <Avatar className="" alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-                        : <Button href="/login" size="sm" className="">Login</Button>
+                        : <Button href="/login" className=" w-10 h-10 bg-white border border-primary flex justify-center items-center"><FaUser className="text-primary"></FaUser></Button>
                 }
             </div>
             <FlowbiteNavbar.Collapse>
