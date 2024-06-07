@@ -5,7 +5,7 @@ import Button from '../../components/Button'
 
 const RegisterPage = () => {
     return (
-        <div className="mt-12">
+        <div className="mt-12 max-w-2xl m-auto">
             <AuthTemplate title="Buat akun anda" subtitle="Silahkan isi data diri anda untuk melanjutkan" footer="Already have an account? ">
                 <form className="flex w-10/12 m-auto flex-col gap-4 my-10">
                     <div>

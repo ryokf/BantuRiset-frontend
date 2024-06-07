@@ -5,7 +5,7 @@ import AuthTemplate from '../../templates/AuthTemplate';
 
 const LoginPage = () => {
     return (
-        <div className='h-screen'>
+        <div className='h-screen max-w-2xl m-auto '>
             <AuthTemplate title="Login" subtitle="Enter your credentials to access your account" footer="Don't have an account? ">
                 <form className="flex w-10/12 m-auto flex-col gap-4">
                     <div>
@@ -24,7 +24,7 @@ const LoginPage = () => {
                         <Checkbox id="remember" />
                         <Label className='font-normal text-gray' htmlFor="remember">Keep me sign in</Label>
                     </div>
-                    <Button className='rounded-lg' color={'dark'}>Submit</Button>
+                    <Button className='rounded-lg' size="md" color={'dark'}>Submit</Button>
                 </form>
             </AuthTemplate>
         </div>
