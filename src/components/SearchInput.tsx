@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SearchInput = ({ searchHandle, className}: { searchHandle: () => void, className?: string }) => {
     return (
         <form onSubmit={searchHandle}>
