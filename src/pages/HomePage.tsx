@@ -3,6 +3,7 @@ import { NavModal } from '../components/NavModal';
 import category from '../data/category';
 import { Card } from '../components/Card';
 import ButtonNav from '../components/ButtonNav';
+import { useState } from 'react';
 
 
 const HomePage = () => {
@@ -19,6 +20,12 @@ const HomePage = () => {
 }
 
 const Hero = () => {
+    const [search, setSearch] = useState('')
+
+    const searchHandle = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        window.location.href = `/search?search=${search}`
+    }
 
     return (
         <div className='mx-8 sm:mx-12 md:grid grid-cols-2 xl:mx-40 2xl:mx-48'>
@@ -27,7 +34,9 @@ const Hero = () => {
                 <h1 className='text-3xl sm:text-4xl font-bold my-2 md:text-3xl lg:text-5xl 2xl:text-6xl lg:leading-snug 2xl:leading-relaxed lg:mb-4'>Wujudkan Inovasi, Majukan Negeri</h1>
                 <p className='text-gray sm:text-lg mb-4 md:text-base lg:text-xl 2xl:text-2xl lg:font-light'>Membantu memajukan teknologi sekarang lebih mudah bersama kami </p>
                 {/* <Button className='lg:w-80'>Donasi Sekarang</Button> */}
-                <input type="text" className='rounded-full border border-primary w-full lg:w-10/12 placeholder:text-gray' placeholder='Cari Riset' />
+                <form onSubmit={searchHandle}>
+                    <input onChange={(e) => setSearch(e.target.value)} type="text" className='rounded-full border border-primary w-full lg:w-10/12 placeholder:text-gray' placeholder='Cari Riset' />
+                </form>
             </div>
             <div className="my-10 w-full flex justify-center lg:justify-end items-center">
                 <img src="./hero.png" alt="" className='sm:max-w-md 2xl:max-w-none md:w-64 lg:w-full 2xl:w-[35rem] aspect-square' />
