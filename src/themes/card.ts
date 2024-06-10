@@ -3,7 +3,7 @@ import type { CustomFlowbiteTheme } from "flowbite-react";
 
 export const cardTheme: CustomFlowbiteTheme["card"] = {
         root: {
-            base: "flex rounded-lg bg-red-500 border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800",
+            base: "flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800",
             children: "flex h-full flex-col justify-center gap-4 p-6 pt-4",
             horizontal: {
                 off: "flex-col",
