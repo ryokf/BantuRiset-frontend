@@ -19,7 +19,7 @@ export function Card() {
                         Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                     </p>
                 </div>
-                <div className="flex gap-2 my-1">
+                <div className="flex gap-2 my-5">
                     <img src="" alt="" className="rounded-full bg-gray h-12 w-12" />
                     <div className="flex flex-col justify-center">
                         <h1 className="text-sm">Ryo khrisna fitriawan</h1>
@@ -32,7 +32,7 @@ export function Card() {
                     </div>
                 </div>
 
-                <div className="flex justify-between text-xs">
+                <div className="flex justify-between text-xs mt-3">
                     <div className="flex flex-col items-center">
                         <div className="">70%</div>
                         <div className="">Funded</div>
