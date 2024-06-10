@@ -4,11 +4,13 @@ import ButtonNav from '../../components/ButtonNav';
 import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
 import { GrSteps } from "react-icons/gr";
+import Navbar2 from '../../components/Navbar2';
 
 const ProjectDetail = () => {
     return (
         <div>
-            <HomeTemplate>
+            <HomeTemplate className='bg-white-secondary'>
+                <Navbar2></Navbar2>
                 <div className="mt-10 w-11/12 m-auto">
                     <div className="rounded-xl overflow-hidden">
                         <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
@@ -64,7 +66,18 @@ const ProjectDetail = () => {
                             <Card></Card>
                     </div>
                 </div>
+                <Footer></Footer>
             </HomeTemplate>
+        </div>
+    )
+}
+
+const Footer = () => {
+    return (
+        <div className='fixed shadow bottom-0 bg-white w-full rounded-xl grid grid-cols-5'>
+            <div className='col-span-1 py-2'>
+                <div className="bg-white border border-primary w-10 rounded-xl aspect-square"></div>
+            </div>
         </div>
     )
 }
