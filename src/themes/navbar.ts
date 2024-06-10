@@ -12,7 +12,7 @@ export const nabarTheme: CustomFlowbiteTheme["navbar"] = {
             off: "",
         },
         inner: {
-            base: "mx-auto flex flex-wrap items-center justify-between mx-2 lg:mx-10 xl:mx-36 2xl:mx-44",
+            base: "mx-auto flex flex-wrap items-center justify-between lg:mx-10 xl:mx-36 2xl:mx-44",
             fluid: {
                 on: "",
                 off: "container",

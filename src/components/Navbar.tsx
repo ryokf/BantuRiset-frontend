@@ -24,7 +24,7 @@ function Navbar() {
     ]
 
     return (
-        <FlowbiteNavbar theme={nabarTheme} fluid rounded className="w-full shadow">
+        <FlowbiteNavbar theme={nabarTheme} fluid rounded className="w-full shadow !px-8">
             <FlowbiteNavbar.Brand href="https://flowbite-react.com">
                 <img src="/logo.svg" className="mr-3 h-8 sm:h-9" alt="Flowbite React Logo" />
                 {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">BantuRiset</span> */}

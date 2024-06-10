@@ -5,12 +5,13 @@ import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
 import { GrSteps } from "react-icons/gr";
 import Navbar2 from '../../components/Navbar2';
+import { AiOutlineDownload } from "react-icons/ai";
 
 const ProjectDetail = () => {
     return (
         <div>
             <HomeTemplate className='bg-white-secondary'>
-                <Navbar2></Navbar2>
+                <Navbar2 title='Project'></Navbar2>
                 <div className="mt-10 w-11/12 m-auto">
                     <div className="rounded-xl overflow-hidden">
                         <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
@@ -57,13 +58,13 @@ const ProjectDetail = () => {
                 <div className="my-4 w-10/12 m-auto">
                     <h1 className='text-xl font-medium mb-2'>Riset Terkait</h1>
                     <div className="grid grid-cols-1 overflow-x-scroll gap-4">
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
-                            <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
                     </div>
                 </div>
                 <Footer></Footer>
@@ -74,9 +75,16 @@ const ProjectDetail = () => {
 
 const Footer = () => {
     return (
-        <div className='fixed shadow bottom-0 bg-white w-full rounded-xl grid grid-cols-5'>
-            <div className='col-span-1 py-2'>
-                <div className="bg-white border border-primary w-10 rounded-xl aspect-square"></div>
+        <div className='fixed shadow bottom-0 bg-white w-full rounded-xl py-1'>
+            <div className="grid grid-cols-6 mx-6 gap-3">
+                <div className='col-span-1 py-2'>
+                    <div className="bg-white p-2 border text-primary border-primary w-full rounded-xl aspect-square flex justify-center items-center">
+                        <AiOutlineDownload size={"100%"}></AiOutlineDownload>
+                    </div>
+                </div>
+                <button className='col-span-5 py-2'>
+                    <div className="text-white border bg-primary w-full rounded-xl h-full flex justify-center items-center">Donasi Sekarang</div>
+                </button>
             </div>
         </div>
     )

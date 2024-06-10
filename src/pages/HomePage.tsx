@@ -4,17 +4,21 @@ import category from '../data/category';
 import { Card } from '../components/Card';
 import ButtonNav from '../components/ButtonNav';
 import { useState } from 'react';
+import Navbar from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 
 const HomePage = () => {
     return (
         <HomeTemplate>
+            <Navbar></Navbar>
             <NavModal></NavModal>
             <Hero></Hero>
             <hr className='border-4 mb-10 w-full md:hidden' />
             <Category></Category>
             <hr className='border-4 my-10 w-full' />
             <Popular></Popular>
+            <Footer></Footer>
         </HomeTemplate>
     )
 }
