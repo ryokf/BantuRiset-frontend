@@ -1,4 +1,3 @@
-import React from 'react'
 import HomeTemplate from '../../templates/HomeTemplate';
 import { Badge } from 'flowbite-react';
 
