@@ -6,11 +6,12 @@ import { IoMdTime } from "react-icons/io";
 import { GrSteps } from "react-icons/gr";
 import Navbar2 from '../../components/Navbar2';
 import { AiOutlineDownload } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const ProjectDetail = () => {
     return (
         <div>
-            <HomeTemplate className='bg-white-secondary'>
+            <HomeTemplate className=''>
                 <Navbar2 title='Project'></Navbar2>
                 <div className="mt-10 w-11/12 m-auto">
                     <div className="rounded-xl overflow-hidden">
@@ -75,16 +76,16 @@ const ProjectDetail = () => {
 
 const Footer = () => {
     return (
-        <div className='fixed shadow bottom-0 bg-white w-full rounded-xl py-1'>
+        <div className='fixed border-2 bottom-0 bg-white w-full rounded-xl py-1'>
             <div className="grid grid-cols-6 mx-6 gap-3">
                 <div className='col-span-1 py-2'>
                     <div className="bg-white p-2 border text-primary border-primary w-full rounded-xl aspect-square flex justify-center items-center">
                         <AiOutlineDownload size={"100%"}></AiOutlineDownload>
                     </div>
                 </div>
-                <button className='col-span-5 py-2'>
+                <Link to={"/donate"} className='col-span-5 py-2'>
                     <div className="text-white border bg-primary w-full rounded-xl h-full flex justify-center items-center">Donasi Sekarang</div>
-                </button>
+                </Link>
             </div>
         </div>
     )

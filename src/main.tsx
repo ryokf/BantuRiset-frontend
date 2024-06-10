@@ -9,6 +9,7 @@ import RegisterRole from './pages/auth/RegisterRole.tsx';
 import DetailCategory from './pages/category/DetailCategory.tsx';
 import SearchResult from './pages/search/SearchResult.tsx';
 import ProjectDetail from './pages/project/ProjectDetail.tsx';
+import DonateProject from './pages/project/DonateProject.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/category/:id" element={<DetailCategory />} />
         <Route path="/search" element={<SearchResult/>} />
         <Route path="/project/:id" element={<ProjectDetail/>} />
+        <Route path="/donate" element={<DonateProject/>} />
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
     </BrowserRouter>
