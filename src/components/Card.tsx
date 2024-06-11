@@ -4,10 +4,10 @@
 import { Card as FlowbiteCard } from 'flowbite-react';
 import { cardTheme } from '../themes/card';
 
-export function Card() {
+export function Card({className = ''}: {className?: string}) {
     return (
         <FlowbiteCard theme={cardTheme}
-            className={`!w-60 md:!w-full sm:max-w-md flex-col rounded-xl overflow-hidden`}
+            className={`w-full sm:max-w-md flex-col rounded-xl overflow-hidden ${className}`}
             renderImage={() => <img className='w-full h-32 md:h-60 object-cover' src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="card" />}
         >
             <a href="/project/1">

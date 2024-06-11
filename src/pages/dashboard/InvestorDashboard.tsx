@@ -68,13 +68,19 @@ const RecentWatch = () => {
             <h1 className='font-medium m-2'>Baru saja anda lihat</h1>
             <div className="flex overflow-scroll">
                 <div className="min-w-fit mx-2">
-                    <Card></Card>
+                    <Card className='w-60'></Card>
                 </div>
-                <div className="w-full">
-                    <Card></Card>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
                 </div>
-                <div className="w-full">
-                    <Card></Card>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
                 </div>
             </div>
         </div>
