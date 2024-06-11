@@ -4,7 +4,7 @@ import BottomNav from '../../components/BottomNav';
 import { useState } from 'react';
 import { Card } from '../../components/Card';
 
-const InvestorDashboard = () => {
+const DonaturDashboard = () => {
     return (
         <div className="bg-white-secondary">
             <HomeTemplate>
@@ -87,4 +87,4 @@ const RecentWatch = () => {
     )
 }
 
-export default InvestorDashboard
+export default DonaturDashboard

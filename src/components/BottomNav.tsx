@@ -20,7 +20,7 @@ const BottomNav = () => {
                     <FaRegBell size={25}></FaRegBell>
                     <h1 className='text-xs font-semibod'>Notif</h1>
                 </Link>
-                <Link to={"/donate"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
+                <Link to={"/profile"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
                     <FaRegUser size={25}></FaRegUser>
                     <h1 className='text-xs font-semibld'>Profile</h1>
                 </Link>
