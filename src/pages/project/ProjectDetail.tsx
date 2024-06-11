@@ -56,16 +56,24 @@ const ProjectDetail = () => {
                     </div>
                 </div>
                 <hr className='border-2 border-gray-200 w-full' />
-                <div className="my-4 w-10/12 m-auto">
-                    <h1 className='text-xl font-medium mb-2'>Riset Terkait</h1>
-                    <div className="grid grid-cols-1 overflow-x-scroll gap-4">
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
+                <div className="mt-4 mb-20 w-11/12 m-auto">
+                    <h1 className='text-xl mx-2 font-medium mb-2'>Riset Terkait</h1>
+                    <div className="flex overflow-scroll">
+                        <div className="min-w-fit mx-2">
+                            <Card className='w-60'></Card>
+                        </div>
+                        <div className="min-w-fit mx-2">
+                            <Card className='w-60'></Card>
+                        </div>
+                        <div className="min-w-fit mx-2">
+                            <Card className='w-60'></Card>
+                        </div>
+                        <div className="min-w-fit mx-2">
+                            <Card className='w-60'></Card>
+                        </div>
+                        <div className="min-w-fit mx-2">
+                            <Card className='w-60'></Card>
+                        </div>
                     </div>
                 </div>
                 <Footer></Footer>
