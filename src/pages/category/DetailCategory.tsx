@@ -2,6 +2,8 @@ import HomeTemplate from '../../templates/HomeTemplate'
 import category from '../../data/category';
 import { useParams } from 'react-router-dom';
 import { Card } from '../../components/Card';
+import Navbar from '../../components/Navbar';
+import { Footer } from '../../components/Footer';
 
 interface ICategory {
     id: number | undefined
@@ -17,6 +19,7 @@ const DetailCategory = () => {
 
     return (
         <HomeTemplate>
+            <Navbar></Navbar>
             <div className="lg:mx-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 md:w-3/4 lg:mx-20">
                     <div className="w-full flex justify-center">
@@ -41,6 +44,7 @@ const DetailCategory = () => {
                     }
                 </div>
             </div>
+            <Footer></Footer>
         </HomeTemplate>
     )
 }

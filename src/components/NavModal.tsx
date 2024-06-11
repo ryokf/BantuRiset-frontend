@@ -7,6 +7,7 @@ import navModal from "../themes/NavModal";
 import { RxCross2 } from "react-icons/rx";
 import navlink from "../data/navlink";
 import { IoMenu } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export function NavModal() {
     const [openModal, setOpenModal] = useState(false);
@@ -37,10 +38,10 @@ export function NavModal() {
                         {
                             navlink.map((item) => {
                                 return (
-                                    <div key={item.color} className="flex items-center gap-4">
+                                    <Link to={item.href} key={item.color} className="flex items-center gap-4">
                                         <div className={`${item.color} w-10 h-10 rounded-xl flex justify-center items-center text-white`}>{item.icon}</div>
                                         <h1 className="text-xl">{item.name}</h1>
-                                    </div>
+                                    </Link>
                                 )
                             })
                         }
