@@ -30,7 +30,7 @@ const Main = () => {
                     <div className="mx-6 mt-8 font-light">
                         <Link to={"/profile/edit"} className="my-3 block">ubah profil</Link>
                         <hr />
-                        <p className="my-3">ubah password</p>
+                        <Link to={"/profile/edit-password"} className="my-3 block">ubah password</Link>
                         <hr />
                         <p className="my-3 text-danger">Logout</p>
                     </div>
