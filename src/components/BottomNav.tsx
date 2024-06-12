@@ -12,11 +12,11 @@ const BottomNav = () => {
                     <AiFillHome size={25}></AiFillHome>
                     <h1 className='text-xs font-semibold'>Home</h1>
                 </Link>
-                <Link to={"/donate"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
+                <Link to={"/project"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
                     <GoProjectRoadmap size={25}></GoProjectRoadmap>
                     <h1 className='text-xs font-semibol'>project</h1>
                 </Link>
-                <Link to={"/donate"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
+                <Link to={"/notification"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
                     <FaRegBell size={25}></FaRegBell>
                     <h1 className='text-xs font-semibod'>Notif</h1>
                 </Link>
