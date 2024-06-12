@@ -64,10 +64,10 @@ const Personalization = () => {
                     <div className="gradient-orange aspect-square text-white rounded-xl w-10 flex justify-center items-center">
                         <FiSun size={"55%"}></FiSun>
                     </div>
-                    <div className="">
+                    <Link to={"/profile/appearance"} className="">
                         <h1 className="font-medium">Tampilan</h1>
                         <p className="text-xs text-gray">mode terang</p>
-                    </div>
+                    </Link>
                 </Link>
                 <hr />
                 <Link to="" className="my-3 flex gap-3 items-center">

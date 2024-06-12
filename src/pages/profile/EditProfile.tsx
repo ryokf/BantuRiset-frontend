@@ -1,5 +1,4 @@
 import { Label, TextInput } from "flowbite-react"
-import BottomNav from "../../components/BottomNav"
 import Navbar2 from "../../components/Navbar2"
 import Button from "../../components/Button"
 import { FaPencil } from "react-icons/fa6";
@@ -47,7 +46,6 @@ const EditProfile = () => {
                 <Button className="mt-2">Simpan</Button>
             </form>
             <div className="h-20"></div>
-            <BottomNav />
         </div>
     )
 }

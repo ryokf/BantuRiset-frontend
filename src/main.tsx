@@ -16,6 +16,7 @@ import DonaturProject from './pages/donatur/DonaturProject.tsx';
 import Notification from './pages/notif/Notification.tsx';
 import EditProfile from './pages/profile/EditProfile.tsx';
 import EditPassword from './pages/profile/EditPassword.tsx';
+import Appearance from './pages/profile/Appearance.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -35,6 +36,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/profile" element={<Profile/>} />
         <Route path="/profile/edit" element={<EditProfile/>} />
         <Route path="/profile/edit-password" element={<EditPassword/>} />
+        <Route path="/profile/appearance" element={<Appearance/>} />
+
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
     </BrowserRouter>
