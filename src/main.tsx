@@ -13,6 +13,7 @@ import DonateProject from './pages/project/DonateProject.tsx';
 import InvestorDashboard from './pages/donatur/DonaturDashboard.tsx';
 import Profile from './pages/profile/Profile.tsx';
 import DonaturProject from './pages/donatur/DonaturProject.tsx';
+import Notification from './pages/notif/Notification.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/donate" element={<DonateProject/>} />
         <Route path="/dashboard" element={<InvestorDashboard/>} />
         <Route path="/project" element={<DonaturProject/>} />
+        <Route path="/notification" element={<Notification/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
