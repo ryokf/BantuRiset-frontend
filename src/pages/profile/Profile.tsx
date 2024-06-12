@@ -28,9 +28,9 @@ const Main = () => {
                         <p className="text-gray text-sm">ryokhrisnaf@gmail.com</p>
                     </div>
                     <div className="mx-6 mt-8 font-light">
-                        <p className="my-3">ubah profil</p>
+                        <Link to={"/profile/edit"} className="my-3 block">ubah profil</Link>
                         <hr />
-                        <p className="my-3">ubah profil</p>
+                        <p className="my-3">ubah password</p>
                         <hr />
                         <p className="my-3 text-danger">Logout</p>
                     </div>
