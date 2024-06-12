@@ -1,6 +1,5 @@
 import { GrAppsRounded } from "react-icons/gr";
-import { FaBook } from "react-icons/fa";
-import { FaQuestionCircle } from "react-icons/fa";
+import { FaBook, FaQuestionCircle } from "react-icons/fa";
 
 const navlink = [
     {

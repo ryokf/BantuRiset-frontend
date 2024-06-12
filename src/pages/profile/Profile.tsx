@@ -58,7 +58,7 @@ const BankAcc = () => {
 const Personalization = () => {
     return (
         <div className="w-11/12 m-auto mt-4">
-            <h1 className="mx-2 text-sm text-gray my-1">Personalization</h1>
+            <h1 className="mx-2 text-sm text-gray my-1">Personalisasi</h1>
             <div className="px-6 py-2 font-light bg-white rounded-xl">
                 <Link to="" className="my-3 flex gap-3 items-center">
                     <div className="gradient-orange aspect-square text-white rounded-xl w-10 flex justify-center items-center">

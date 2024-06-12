@@ -5,25 +5,45 @@ import { FaRegBell } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 
 const BottomNav = () => {
+    const navlink = [
+        {
+            name: "Home",
+            href: "/dashboard",
+            icon: <AiFillHome size={25}/>,
+        },
+        {
+            name: "Project",
+            href: "/project",
+            icon: <GoProjectRoadmap size={25}/>,
+        },
+        {
+            name: "Notif",
+            href: "/notification",
+            icon: <FaRegBell size={25}/>,
+        },
+        {
+            name: "Profile",
+            href: "/profile",
+            icon: <FaRegUser size={25}/>,
+        },
+    ]
+
+    console.log(window.location.pathname)
+
     return (
         <div className='fixed border-2 bottom-0 bg-white w-full rounded-xl py-2'>
             <div className="grid grid-cols-4 my-1">
-                <Link to={"/dashboard"} className='flex gap-0.5 flex-col justify-center items-center'>
-                    <AiFillHome size={25}></AiFillHome>
-                    <h1 className='text-xs font-semibold'>Home</h1>
-                </Link>
-                <Link to={"/project"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
-                    <GoProjectRoadmap size={25}></GoProjectRoadmap>
-                    <h1 className='text-xs font-semibol'>project</h1>
-                </Link>
-                <Link to={"/notification"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
-                    <FaRegBell size={25}></FaRegBell>
-                    <h1 className='text-xs font-semibod'>Notif</h1>
-                </Link>
-                <Link to={"/profile"} className='flex gap-0.5 text-gray flex-col justify-center items-center'>
-                    <FaRegUser size={25}></FaRegUser>
-                    <h1 className='text-xs font-semibld'>Profile</h1>
-                </Link>
+                {
+                    navlink.map((item, index) => {
+                        return (
+                            <Link to={item.href} key={index} className={`${item.href == window.location.pathname ? 'text-black' : 'text-gray'} flex gap-0.5 flex-col justify-center items-center`}>
+                                {item.icon}
+                                <h1 className='text-xs font-semibold'>{item.name}</h1>
+                            </Link>
+                        )
+                    })
+                }
+
         
             </div>
         </div>

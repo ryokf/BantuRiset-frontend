@@ -1,7 +1,5 @@
-import React from 'react'
 import Navbar2 from '../../components/Navbar2';
 import BottomNav from '../../components/BottomNav';
-import { FaUser } from 'react-icons/fa';
 
 const Notification = () => {
     return (
