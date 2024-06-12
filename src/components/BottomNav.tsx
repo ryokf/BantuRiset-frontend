@@ -8,7 +8,7 @@ const BottomNav = () => {
     return (
         <div className='fixed border-2 bottom-0 bg-white w-full rounded-xl py-2'>
             <div className="grid grid-cols-4 my-1">
-                <Link to={"/donate"} className='flex gap-0.5 flex-col justify-center items-center'>
+                <Link to={"/dashboard"} className='flex gap-0.5 flex-col justify-center items-center'>
                     <AiFillHome size={25}></AiFillHome>
                     <h1 className='text-xs font-semibold'>Home</h1>
                 </Link>
