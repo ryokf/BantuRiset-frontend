@@ -1,8 +1,7 @@
 import { Navbar as FlowbiteNavbar } from 'flowbite-react';
 import { nabarTheme } from '../themes/navbar';
 import { IoChevronBackOutline } from "react-icons/io5";
-import { RiShareLine } from "react-icons/ri";
-const Navbar2 = ({title} :{title:string}) => {
+const Navbar2 = ({title, actionButton} :{title:string, actionButton?:React.ReactNode}) => {
     return (
         <FlowbiteNavbar theme={nabarTheme} fluid rounded className="!w-full shadow !py-4 !px-4">
             <div className="grid grid-cols-3 w-full">
@@ -12,7 +11,7 @@ const Navbar2 = ({title} :{title:string}) => {
                 </button>
                 <div className="text-center font-medium">{title}</div>
                 <div className="flex justify-end  text-primary">
-                    <RiShareLine size={20}></RiShareLine>
+                    {actionButton}
                 </div>
             </div>
         </FlowbiteNavbar>

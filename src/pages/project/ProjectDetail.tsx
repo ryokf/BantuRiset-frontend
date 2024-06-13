@@ -1,5 +1,5 @@
 import HomeTemplate from '../../templates/HomeTemplate';
-import { Avatar, Badge, Button, Card as FlowbiteCard } from 'flowbite-react';
+import { Avatar, Badge, Button, Drawer, Dropdown, Card as FlowbiteCard } from 'flowbite-react';
 import ButtonNav from '../../components/ButtonNav';
 import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
@@ -7,12 +7,36 @@ import { GrSteps } from "react-icons/gr";
 import Navbar2 from '../../components/Navbar2';
 import { AiOutlineDownload } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-
+import { IoMenuOutline } from "react-icons/io5";
+import { useState } from 'react';
+import drawerTheme from '../../themes/drawer';
 const ProjectDetail = () => {
+
+    const ActionButton = () => {
+        const [isOpen, setIsOpen] = useState(true);
+
+        const handleClose = () => setIsOpen(false);
+        return (
+            <>
+                <div className="flex items-center justify-center !bg-white !p-0 !m-0">
+                    <button className='w-6 ' onClick={() => setIsOpen(true)}><IoMenuOutline size={"100%"}></IoMenuOutline></button>
+                </div>
+                <Drawer theme={drawerTheme} className='!h-40 !w-20 top-10' position='right' open={isOpen} onClose={handleClose}>
+                    <div className="bg-white/75 w-full h-full blur-sm">
+                        <Drawer.Header title="Drawer" />
+                        <Drawer.Items className='!rounded-xl'>
+                            <div className=""></div>
+                        </Drawer.Items>
+                    </div>
+                </Drawer>
+            </>
+        )
+    }
+
     return (
         <div>
             <HomeTemplate className=''>
-                <Navbar2 title='Project'></Navbar2>
+                <Navbar2 title='Project' actionButton={<ActionButton />}></Navbar2>
                 <Content></Content>
                 <hr className='border-2 border-gray-200 w-full' />
                 <ReportProgress></ReportProgress>
