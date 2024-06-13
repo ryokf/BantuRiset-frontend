@@ -18,6 +18,7 @@ import EditProfile from './pages/profile/EditProfile.tsx';
 import EditPassword from './pages/profile/EditPassword.tsx';
 import Appearance from './pages/profile/Appearance.tsx';
 import ResearcherDashboard from './pages/researcher/ResearcherDashboard.tsx';
+import CreateProject from './pages/project/CreateProject.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -29,11 +30,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/register/:role" element={<RegisterPage />} />
         <Route path="/category/:id" element={<DetailCategory />} />
         <Route path="/search" element={<SearchResult/>} />
+        <Route path="/project" element={<DonaturProject/>} />
         <Route path="/project/:id" element={<ProjectDetail/>} />
+        <Route path="/project/create" element={<CreateProject/>} />
         <Route path="/donate" element={<DonateProject/>} />
         <Route path="/dashboard" element={<ResearcherDashboard/>} />
         <Route path="/dashboard" element={<InvestorDashboard/>} />
-        <Route path="/project" element={<DonaturProject/>} />
         <Route path="/notification" element={<Notification/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/profile/edit" element={<EditProfile/>} />

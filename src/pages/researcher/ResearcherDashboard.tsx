@@ -2,7 +2,6 @@
 
 import { Table } from "flowbite-react";
 import DashboardTemplate from '../../templates/DashboardTemplate'
-import { HiDotsHorizontal } from "react-icons/hi";
 import ButtonNav from '../../components/ButtonNav';
 
 const ResearcherDashboard = () => {
