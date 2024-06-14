@@ -41,7 +41,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/profile/edit" element={<EditProfile/>} />
         <Route path="/profile/edit-password" element={<EditPassword/>} />
         <Route path="/profile/appearance" element={<Appearance/>} />
-
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
     </BrowserRouter>

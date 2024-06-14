@@ -1,5 +1,5 @@
 import HomeTemplate from '../../templates/HomeTemplate';
-import { Avatar, Badge, Button, Drawer, Dropdown, Card as FlowbiteCard } from 'flowbite-react';
+import { Avatar, Badge, Button, Drawer, Card as FlowbiteCard } from 'flowbite-react';
 import ButtonNav from '../../components/ButtonNav';
 import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom';
 import { IoMenuOutline } from "react-icons/io5";
 import { useState } from 'react';
 import drawerTheme from '../../themes/drawer';
+import { FaPencil } from "react-icons/fa6";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { IoShareSocial } from "react-icons/io5";
 const ProjectDetail = () => {
 
     const ActionButton = () => {
@@ -21,13 +24,19 @@ const ProjectDetail = () => {
                 <div className="flex items-center justify-center !bg-white !p-0 !m-0">
                     <button className='w-6 ' onClick={() => setIsOpen(true)}><IoMenuOutline size={"100%"}></IoMenuOutline></button>
                 </div>
-                <Drawer theme={drawerTheme} className='!h-40 !w-20 top-10' position='right' open={isOpen} onClose={handleClose}>
-                    <div className="bg-white/75 w-full h-full blur-sm">
+                <Drawer theme={drawerTheme} className='!h-52 !w-20 top-20' position='right' open={isOpen} onClose={handleClose}>
                         <Drawer.Header title="Drawer" />
                         <Drawer.Items className='!rounded-xl'>
-                            <div className=""></div>
+                            <div className="flex flex-col my-4 justify-center items-center gradient-amber w-12 rounded-xl text-white aspect-square m-auto">
+                                <FaPencil size={20}/>
+                            </div>
+                            <div className="flex my-4 flex-col justify-center items-center gradient-red w-12 rounded-xl text-white aspect-square m-auto">
+                                <FaRegTrashAlt size={20}/>
+                            </div>
+                            <div className="flex flex-col justify-center items-center gradient-blue w-12 rounded-xl text-white aspect-square m-auto">
+                                <IoShareSocial size={20}/>
+                            </div>
                         </Drawer.Items>
-                    </div>
                 </Drawer>
             </>
         )
