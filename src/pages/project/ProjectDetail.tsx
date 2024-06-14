@@ -1,7 +1,7 @@
 import HomeTemplate from '../../templates/HomeTemplate';
 import { Avatar, Badge, Button, Drawer, Card as FlowbiteCard } from 'flowbite-react';
-import ButtonNav from '../../components/ButtonNav';
-import { Card } from '../../components/Card';
+// import ButtonNav from '../../components/ButtonNav';
+// import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
 import { GrSteps } from "react-icons/gr";
 import Navbar2 from '../../components/Navbar2';
@@ -91,21 +91,21 @@ const Content = () => {
     </div>)
 }
 
-const ResearcherInfo = () => {
-    return (
-        <div className="flex gap-2 w-10/12 m-auto items-center my-4">
-            <div className="rounded-full w-20 aspect-square bg-gray">
-                <img src="" alt="" />
-            </div>
-            <div className="flex flex-col justify-center gap-1">
-                <h1 className='font-medium'>Ryo Khrisna Fitriawan</h1>
-                <p className='text-xs text-gray'>Semarang, jawa tengah, indonesia</p>
-                <p className='text-xs text-gray'>universitas dian nuswantoro</p>
-                <ButtonNav></ButtonNav>
-            </div>
-        </div>
-    )
-}
+// const ResearcherInfo = () => {
+//     return (
+//         <div className="flex gap-2 w-10/12 m-auto items-center my-4">
+//             <div className="rounded-full w-20 aspect-square bg-gray">
+//                 <img src="" alt="" />
+//             </div>
+//             <div className="flex flex-col justify-center gap-1">
+//                 <h1 className='font-medium'>Ryo Khrisna Fitriawan</h1>
+//                 <p className='text-xs text-gray'>Semarang, jawa tengah, indonesia</p>
+//                 <p className='text-xs text-gray'>universitas dian nuswantoro</p>
+//                 <ButtonNav></ButtonNav>
+//             </div>
+//         </div>
+//     )
+// }
 
 const ReportProgress = () => {
     return (
@@ -143,30 +143,30 @@ const ReportProgress = () => {
     )
 }
 
-const RelevantProject = () => {
-    return (
-        <div className="mt-4 mb-20 w-11/12 m-auto">
-            <h1 className='text-xl mx-2 font-medium mb-2'>Riset Terkait</h1>
-            <div className="flex overflow-scroll">
-                <div className="min-w-fit mx-2">
-                    <Card className='w-60'></Card>
-                </div>
-                <div className="min-w-fit mx-2">
-                    <Card className='w-60'></Card>
-                </div>
-                <div className="min-w-fit mx-2">
-                    <Card className='w-60'></Card>
-                </div>
-                <div className="min-w-fit mx-2">
-                    <Card className='w-60'></Card>
-                </div>
-                <div className="min-w-fit mx-2">
-                    <Card className='w-60'></Card>
-                </div>
-            </div>
-        </div>
-    )
-}
+// const RelevantProject = () => {
+//     return (
+//         <div className="mt-4 mb-20 w-11/12 m-auto">
+//             <h1 className='text-xl mx-2 font-medium mb-2'>Riset Terkait</h1>
+//             <div className="flex overflow-scroll">
+//                 <div className="min-w-fit mx-2">
+//                     <Card className='w-60'></Card>
+//                 </div>
+//                 <div className="min-w-fit mx-2">
+//                     <Card className='w-60'></Card>
+//                 </div>
+//                 <div className="min-w-fit mx-2">
+//                     <Card className='w-60'></Card>
+//                 </div>
+//                 <div className="min-w-fit mx-2">
+//                     <Card className='w-60'></Card>
+//                 </div>
+//                 <div className="min-w-fit mx-2">
+//                     <Card className='w-60'></Card>
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
 
 const DonaturList = () => {
     return (
