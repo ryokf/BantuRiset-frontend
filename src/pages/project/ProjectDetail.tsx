@@ -1,5 +1,5 @@
 import HomeTemplate from '../../templates/HomeTemplate';
-import { Avatar, Badge, Button, Drawer, Card as FlowbiteCard } from 'flowbite-react';
+import { Avatar, Badge, Button, Drawer, Card as FlowbiteCard, Modal } from 'flowbite-react';
 // import ButtonNav from '../../components/ButtonNav';
 // import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
@@ -13,10 +13,11 @@ import drawerTheme from '../../themes/drawer';
 import { FaPencil } from "react-icons/fa6";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
-const ProjectDetail = () => {
+// import { HiOutlineExclamationCircle } from "react-icons/hi";
 
+const ProjectDetail = () => {
     const ActionButton = () => {
-        const [isOpen, setIsOpen] = useState(true);
+        const [isOpen, setIsOpen] = useState(false);
 
         const handleClose = () => setIsOpen(false);
         return (
@@ -25,25 +26,58 @@ const ProjectDetail = () => {
                     <button className='w-6 ' onClick={() => setIsOpen(true)}><IoMenuOutline size={"100%"}></IoMenuOutline></button>
                 </div>
                 <Drawer theme={drawerTheme} className='!h-52 !w-20 top-20' position='right' open={isOpen} onClose={handleClose}>
-                        <Drawer.Header title="Drawer" />
-                        <Drawer.Items className='!rounded-xl'>
-                            <div className="flex flex-col my-4 justify-center items-center gradient-amber w-12 rounded-xl text-white aspect-square m-auto">
-                                <FaPencil size={20}/>
-                            </div>
-                            <div className="flex my-4 flex-col justify-center items-center gradient-red w-12 rounded-xl text-white aspect-square m-auto">
-                                <FaRegTrashAlt size={20}/>
-                            </div>
-                            <div className="flex flex-col justify-center items-center gradient-blue w-12 rounded-xl text-white aspect-square m-auto">
-                                <IoShareSocial size={20}/>
-                            </div>
-                        </Drawer.Items>
+                    <Drawer.Header title="Drawer" />
+                    <Drawer.Items className='!rounded-xl'>
+                        <div className="flex flex-col my-4 justify-center items-center gradient-amber w-12 rounded-xl text-white aspect-square m-auto">
+                            <FaPencil size={20} />
+                        </div>
+                        <DeleteModal></DeleteModal>
+                        <div className="flex flex-col justify-center items-center gradient-blue w-12 rounded-xl text-white aspect-square m-auto">
+                            <IoShareSocial size={20} />
+                        </div>
+                    </Drawer.Items>
                 </Drawer>
             </>
         )
     }
 
+    function DeleteModal() {
+        const [openModal, setOpenModal] = useState(false);
+
+        return (
+            <>
+                <button onClick={() => setOpenModal(true)} className="flex my-4 flex-col justify-center items-center gradient-red w-12 rounded-xl text-white aspect-square m-auto">
+                    <FaRegTrashAlt size={20} />
+                </button>
+                <Modal className='*:!top-52 !overflow-hidden' show={openModal} size="sm" onClose={() => setOpenModal(false)} popup>
+                    <Modal.Body>
+                        <div className="text-center pt-6 pb-2">
+                            <h3 className="mb-5 text-sm font-normal dark:text-gray-400">
+                                <span className=''>
+                                    Yakin ingin menghapus proyek :
+                                </span>
+                                <br />
+                                <span className="text-primary">
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolorem unde"
+                                </span>
+                            </h3>
+                            <div className="flex justify-center gap-4">
+                                <Button color="gray" onClick={() => setOpenModal(false)}>
+                                    tidak, batal
+                                </Button>
+                                <Button color="failure" onClick={() => setOpenModal(false)}>
+                                    iya, hapus
+                                </Button>
+                            </div>
+                        </div>
+                    </Modal.Body>
+                </Modal>
+            </>
+        );
+    }
+
     return (
-        <div>
+        <div className=''>
             <HomeTemplate className=''>
                 <Navbar2 title='Project' actionButton={<ActionButton />}></Navbar2>
                 <Content></Content>

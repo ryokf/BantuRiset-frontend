@@ -2,7 +2,7 @@ import { CustomFlowbiteTheme } from "flowbite-react";
 
 const drawerTheme: CustomFlowbiteTheme["drawer"] = {
     root: {
-        base: "fixed z-40 overflow-y-auto bg-white/50 shadow backdrop-blur-sm transition-transform dark:bg-gray-800 rounded-xl mx-4",
+        base: "fixed z-40 overflow-y-auto bg-white-secondary/50 shadow backdrop-blur-sm transition-transform dark:bg-gray-800 rounded-xl mx-4",
         backdrop: "fixed inset-0 z-30",
         edge: "bottom-16",
         position: {
