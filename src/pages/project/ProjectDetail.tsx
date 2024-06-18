@@ -1,94 +1,22 @@
 import HomeTemplate from '../../templates/HomeTemplate';
-import { Avatar, Badge, Button, Drawer, Card as FlowbiteCard, Modal } from 'flowbite-react';
-// import ButtonNav from '../../components/ButtonNav';
-// import { Card } from '../../components/Card';
+import { Avatar, Badge, Button, Card as FlowbiteCard } from 'flowbite-react';
+import ButtonNav from '../../components/ButtonNav';
+import { Card } from '../../components/Card';
 import { IoMdTime } from "react-icons/io";
-import { GrSteps } from "react-icons/gr";
 import Navbar2 from '../../components/Navbar2';
 import { AiOutlineDownload } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import { IoMenuOutline } from "react-icons/io5";
-import { useState } from 'react';
-import drawerTheme from '../../themes/drawer';
-import { FaPencil } from "react-icons/fa6";
-import { FaRegTrashAlt } from "react-icons/fa";
-import { IoShareSocial } from "react-icons/io5";
+import { BsBarChartSteps } from "react-icons/bs";
 // import { HiOutlineExclamationCircle } from "react-icons/hi";
+import ProjectAction from '../../components/ProjectAction';
 
-const ProjectDetail = () => {
-    const ActionButton = () => {
-        const [isOpen, setIsOpen] = useState(false);
-
-        const handleClose = () => setIsOpen(false);
-        return (
-            <>
-                <div className="flex items-center justify-center !bg-white !p-0 !m-0">
-                    <button className='w-6 ' onClick={() => setIsOpen(true)}><IoMenuOutline size={"100%"}></IoMenuOutline></button>
-                </div>
-                <Drawer theme={drawerTheme} className='!h-52 !w-20 top-20' position='right' open={isOpen} onClose={handleClose}>
-                    <Drawer.Header title="Drawer" />
-                    <Drawer.Items className='!rounded-xl'>
-                        <div className="flex flex-col my-4 justify-center items-center gradient-amber w-12 rounded-xl text-white aspect-square m-auto">
-                            <FaPencil size={20} />
-                        </div>
-                        <DeleteModal></DeleteModal>
-                        <div className="flex flex-col justify-center items-center gradient-blue w-12 rounded-xl text-white aspect-square m-auto">
-                            <IoShareSocial size={20} />
-                        </div>
-                    </Drawer.Items>
-                </Drawer>
-            </>
-        )
-    }
-
-    function DeleteModal() {
-        const [openModal, setOpenModal] = useState(false);
-
-        return (
-            <>
-                <button onClick={() => setOpenModal(true)} className="flex my-4 flex-col justify-center items-center gradient-red w-12 rounded-xl text-white aspect-square m-auto">
-                    <FaRegTrashAlt size={20} />
-                </button>
-                <Modal className='*:!top-52 !overflow-hidden' show={openModal} size="sm" onClose={() => setOpenModal(false)} popup>
-                    <Modal.Body>
-                        <div className="text-center pt-6 pb-2">
-                            <h3 className="mb-5 text-sm font-normal dark:text-gray-400">
-                                <span className=''>
-                                    Yakin ingin menghapus proyek :
-                                </span>
-                                <br />
-                                <span className="text-primary">
-                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolorem unde"
-                                </span>
-                            </h3>
-                            <div className="flex justify-center gap-4">
-                                <Button color="gray" onClick={() => setOpenModal(false)}>
-                                    tidak, batal
-                                </Button>
-                                <Button color="failure" onClick={() => setOpenModal(false)}>
-                                    iya, hapus
-                                </Button>
-                            </div>
-                        </div>
-                    </Modal.Body>
-                </Modal>
-            </>
-        );
-    }
+const ProjectDetail = ({children} : {children?: React.ReactNode}) => {
 
     return (
-        <div className=''>
-            <HomeTemplate className=''>
-                <Navbar2 title='Project' actionButton={<ActionButton />}></Navbar2>
-                <Content></Content>
-                <hr className='border-2 border-gray-200 w-full' />
-                <ReportProgress></ReportProgress>
-                <hr className='border-2 border-gray-200 w-full' />
-                <DonaturList />
-                <div className="h-20"></div>
-                <Footer></Footer>
-            </HomeTemplate >
-        </div >
+        <HomeTemplate className=''>
+            <Navbar2 title='Project' actionButton={<ProjectAction />}></Navbar2>
+            {children}
+        </HomeTemplate >
     )
 }
 
@@ -101,13 +29,13 @@ const Content = () => {
             <Badge color={'blue'} className='w-20 justify-center'>Physics</Badge>
             <h1 className='text-xl font-medium my-2'>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
             <div className="grid w-full grid-cols-1">
-                <div className="flex gap-2 items-start my-2 ">
-                    <IoMdTime size={30}></IoMdTime>
-                    <div className="text-sm">10 Hari tersisa</div>
+                <div className="flex gap-1  items-center my-2 ">
+                    <IoMdTime size={20}></IoMdTime>
+                    <div className="text-sm text-gray">10 Hari tersisa</div>
                 </div>
-                <div className="flex gap-2 items-start my-2 ">
-                    <GrSteps size={30}></GrSteps>
-                    <div className="text-sm">5 tahap</div>
+                <div className="flex gap-2 items-center my-2 ">
+                    <BsBarChartSteps className='' size={20}/>
+                    <div className="text-sm text-gray"> 5 tahap</div>
                 </div>
             </div>
             <div className="my-2">
@@ -125,21 +53,21 @@ const Content = () => {
     </div>)
 }
 
-// const ResearcherInfo = () => {
-//     return (
-//         <div className="flex gap-2 w-10/12 m-auto items-center my-4">
-//             <div className="rounded-full w-20 aspect-square bg-gray">
-//                 <img src="" alt="" />
-//             </div>
-//             <div className="flex flex-col justify-center gap-1">
-//                 <h1 className='font-medium'>Ryo Khrisna Fitriawan</h1>
-//                 <p className='text-xs text-gray'>Semarang, jawa tengah, indonesia</p>
-//                 <p className='text-xs text-gray'>universitas dian nuswantoro</p>
-//                 <ButtonNav></ButtonNav>
-//             </div>
-//         </div>
-//     )
-// }
+const ResearcherInfo = () => {
+    return (
+        <div className="flex gap-2 w-10/12 m-auto items-center my-4">
+            <div className="rounded-full w-20 aspect-square bg-gray">
+                <img src="" alt="" />
+            </div>
+            <div className="flex flex-col justify-center gap-1">
+                <h1 className='font-medium'>Ryo Khrisna Fitriawan</h1>
+                <p className='text-xs text-gray'>Semarang, jawa tengah, indonesia</p>
+                <p className='text-xs text-gray'>universitas dian nuswantoro</p>
+                <ButtonNav></ButtonNav>
+            </div>
+        </div>
+    )
+}
 
 const ReportProgress = () => {
     return (
@@ -177,30 +105,30 @@ const ReportProgress = () => {
     )
 }
 
-// const RelevantProject = () => {
-//     return (
-//         <div className="mt-4 mb-20 w-11/12 m-auto">
-//             <h1 className='text-xl mx-2 font-medium mb-2'>Riset Terkait</h1>
-//             <div className="flex overflow-scroll">
-//                 <div className="min-w-fit mx-2">
-//                     <Card className='w-60'></Card>
-//                 </div>
-//                 <div className="min-w-fit mx-2">
-//                     <Card className='w-60'></Card>
-//                 </div>
-//                 <div className="min-w-fit mx-2">
-//                     <Card className='w-60'></Card>
-//                 </div>
-//                 <div className="min-w-fit mx-2">
-//                     <Card className='w-60'></Card>
-//                 </div>
-//                 <div className="min-w-fit mx-2">
-//                     <Card className='w-60'></Card>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
+const RelevantProject = () => {
+    return (
+        <div className="mt-4 mb-20 w-11/12 m-auto">
+            <h1 className='text-xl mx-2 font-medium mb-2'>Riset Terkait</h1>
+            <div className="flex overflow-scroll">
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+                <div className="min-w-fit mx-2">
+                    <Card className='w-60'></Card>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 const DonaturList = () => {
     return (
@@ -240,5 +168,12 @@ const Footer = () => {
         </div>
     )
 }
+
+ProjectDetail.Content = Content
+ProjectDetail.Footer = Footer
+ProjectDetail.DonaturList = DonaturList
+ProjectDetail.RelevantProject = RelevantProject
+ProjectDetail.ReportProgress = ReportProgress
+ProjectDetail.ResearcherInfo = ResearcherInfo
 
 export default ProjectDetail

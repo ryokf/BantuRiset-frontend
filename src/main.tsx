@@ -29,18 +29,25 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/register" element={<RegisterRole />} />
         <Route path="/register/:role" element={<RegisterPage />} />
         <Route path="/category/:id" element={<DetailCategory />} />
-        <Route path="/search" element={<SearchResult/>} />
-        <Route path="/project" element={<DonaturProject/>} />
-        <Route path="/project/:id" element={<ProjectDetail/>} />
-        <Route path="/project/create" element={<CreateProject/>} />
-        <Route path="/donate" element={<DonateProject/>} />
-        <Route path="/dashboard" element={<ResearcherDashboard/>} />
-        <Route path="/dashboard" element={<InvestorDashboard/>} />
-        <Route path="/notification" element={<Notification/>} />
-        <Route path="/profile" element={<Profile/>} />
-        <Route path="/profile/edit" element={<EditProfile/>} />
-        <Route path="/profile/edit-password" element={<EditPassword/>} />
-        <Route path="/profile/appearance" element={<Appearance/>} />
+        <Route path="/search" element={<SearchResult />} />
+        <Route path="/project" element={<DonaturProject />} />
+        <Route
+          path="/project/:id"
+          element={
+            <ProjectDetail>
+              <ProjectDetail.Content />
+            </ProjectDetail>
+          }
+        />
+        <Route path="/project/create" element={<CreateProject />} />
+        <Route path="/donate" element={<DonateProject />} />
+        <Route path="/dashboard" element={<ResearcherDashboard />} />
+        <Route path="/dashboard" element={<InvestorDashboard />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/edit" element={<EditProfile />} />
+        <Route path="/profile/edit-password" element={<EditPassword />} />
+        <Route path="/profile/appearance" element={<Appearance />} />
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
     </BrowserRouter>
