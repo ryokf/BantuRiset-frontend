@@ -1,7 +1,7 @@
 import { Navbar as FlowbiteNavbar } from 'flowbite-react';
 import { nabarTheme } from '../themes/navbar';
 import { IoChevronBackOutline } from "react-icons/io5";
-const Navbar2 = ({title, actionButton} :{title:string, actionButton?:React.ReactNode}) => {
+const Navbar2 = ({title, actionButton} :{title?:string, actionButton?:React.ReactNode}) => {
     return (
         <FlowbiteNavbar theme={nabarTheme} fluid rounded className="!w-full shadow !py-4 !px-4">
             <div className="grid grid-cols-3 w-full">

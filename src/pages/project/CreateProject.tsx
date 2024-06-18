@@ -4,7 +4,7 @@ import Button from "../../components/Button"
 
 const CreateProject = () => {
     return (
-        <DashboardTemplate>
+        <DashboardTemplate title="Buat Proyek">
             <h1 className="text-2xl font-medium text-center m-4">Buat Rancangan Proyek Anda</h1>
             <form className="flex max-w-md flex-col gap-4 w-11/12 m-auto !my-0">
                 <div>

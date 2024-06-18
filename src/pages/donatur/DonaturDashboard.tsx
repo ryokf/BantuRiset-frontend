@@ -1,20 +1,15 @@
-import HomeTemplate from '../../templates/HomeTemplate'
-import Navbar2 from '../../components/Navbar2';
-import BottomNav from '../../components/BottomNav';
 import { useState } from 'react';
 import { Card } from '../../components/Card';
+import DashboardTemplate from '../../templates/DashboardTemplate';
 
 const DonaturDashboard = () => {
     return (
-        <div className="bg-white-secondary">
-            <HomeTemplate>
-                <Navbar2 title='Dashboard'></Navbar2>
-                <MainCard />
-                <Search/>
-                <RecentWatch/>
-                <BottomNav></BottomNav>
-            </HomeTemplate>
-        </div>
+        <DashboardTemplate title="Dashboard">
+            <MainCard />
+            <Search />
+            <RecentWatch />
+        </DashboardTemplate>
+
     )
 }
 

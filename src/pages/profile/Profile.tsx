@@ -1,19 +1,16 @@
 import { Link } from "react-router-dom";
-import BottomNav from "../../components/BottomNav";
-import Navbar2 from '../../components/Navbar2';
 import { FiSun } from "react-icons/fi";
 import { TbLetterCase } from "react-icons/tb";
+import DashboardTemplate from "../../templates/DashboardTemplate";
 
 const Profile = () => {
     return (
-        <div className="bg-white-secondary">
-            <Navbar2 title='Profile'></Navbar2>
+        <DashboardTemplate title="Profile">
             <Main />
             <BankAcc />
             <Personalization />
             <div className="h-20"></div>
-            <BottomNav></BottomNav>
-        </div>
+        </DashboardTemplate>
     )
 }
 
@@ -72,7 +69,7 @@ const Personalization = () => {
                 <hr />
                 <Link to="" className="my-3 flex gap-3 items-center">
                     <div className="gradient-purple aspect-square text-white rounded-xl w-10 flex justify-center items-center">
-                        <TbLetterCase size={"55%"}/>
+                        <TbLetterCase size={"55%"} />
                     </div>
                     <div className="">
                         <h1 className="font-medium">Bahasa</h1>

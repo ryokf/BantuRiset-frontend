@@ -6,7 +6,7 @@ import ButtonNav from '../../components/ButtonNav';
 
 const ResearcherDashboard = () => {
     return (
-        <DashboardTemplate>
+        <DashboardTemplate title="Dashboard">
             <MainCard />
             <ProjectList />
         </DashboardTemplate>

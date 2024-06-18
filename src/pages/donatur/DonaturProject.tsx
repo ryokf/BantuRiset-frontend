@@ -1,11 +1,9 @@
-import BottomNav from '../../components/BottomNav';
-import Navbar2 from '../../components/Navbar2';
 import ButtonBadge from '../../components/ButtonBadge';
 import { Card } from '../../components/Card';
+import DashboardTemplate from '../../templates/DashboardTemplate';
 const DonaturProject = () => {
     return (
-        <div className='bg-white-secondary'>
-            <Navbar2 title='proyek'></Navbar2>
+        <DashboardTemplate title="Proyek">
             <div className="my-4 mx-6 ">
                 <h1 className='font-medium text-xl mb-2'>Proyek yang anda danai</h1>
                 <p className='text-gray text-sm'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolorem unde</p>
@@ -21,8 +19,7 @@ const DonaturProject = () => {
                 <Card></Card>
             </div>
             <div className="h-20"></div>
-            <BottomNav></BottomNav>
-        </div>
+        </DashboardTemplate>
     )
 }
 
