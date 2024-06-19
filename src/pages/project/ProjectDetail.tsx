@@ -10,7 +10,7 @@ import { BsBarChartSteps } from "react-icons/bs";
 // import { HiOutlineExclamationCircle } from "react-icons/hi";
 import ProjectAction from '../../components/ProjectAction';
 
-const ProjectDetail = ({children} : {children?: React.ReactNode}) => {
+const ProjectDetail = ({ children }: { children?: React.ReactNode }) => {
 
     return (
         <HomeTemplate className=''>
@@ -21,36 +21,51 @@ const ProjectDetail = ({children} : {children?: React.ReactNode}) => {
 }
 
 const Content = () => {
-    return (<div className="mt-10 w-11/12 m-auto">
-        <div className="rounded-xl overflow-hidden">
-            <img src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-        </div>
-        <div className="my-6 mx-2">
-            <Badge color={'blue'} className='w-20 justify-center'>Physics</Badge>
-            <h1 className='text-xl font-medium my-2'>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
-            <div className="grid w-full grid-cols-1">
-                <div className="flex gap-1  items-center my-2 ">
-                    <IoMdTime size={20}></IoMdTime>
-                    <div className="text-sm text-gray">10 Hari tersisa</div>
+    return (
+        <div className="mt-10 w-11/12 m-auto">
+            <div className="my-6 grid md:grid-cols-2 gap-4 m-auto">
+                <div className="rounded-xl overflow-hidden m-auto max-w-2xl mb-6 col-span-1 flex items-start">
+                    <img className='md:aspect-square object-cover' src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                 </div>
-                <div className="flex gap-2 items-center my-2 ">
-                    <BsBarChartSteps className='' size={20}/>
-                    <div className="text-sm text-gray"> 5 tahap</div>
+                <div className="col-span-1 flex-col justify-center">
+                    <Badge color={'blue'} className='w-20 justify-center'>Physics</Badge>
+                    <h1 className='text-xl font-medium my-2'>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+                    <div className="grid w-full grid-cols-1 md:grid-cols-">
+                        <div className="flex gap-1  items-center my-2 ">
+                            <IoMdTime size={20}></IoMdTime>
+                            <div className="text-sm text-gray">10 Hari tersisa</div>
+                        </div>
+                        <div className="flex gap-2 items-center my-2 ">
+                            <BsBarChartSteps className='' size={20} />
+                            <div className="text-sm text-gray"> 5 tahap</div>
+                        </div>
+                    </div>
+                    <div className="my-2">
+                        <p className='text-gray text-sm'>dari Rp3.000.000</p>
+                        <p className='font-medium'>terkumpul <span className='text-primary'>Rp1.500.000</span></p>
+                        <div className="my-2 max-w-xl h-2 bg-[#ddd] rounded-full overflow-hidden">
+                            <div className="h-2 w-[25%] bg-success"></div>
+                        </div>
+                    </div>
+                    <div className="">
+                        <div className="w-80 grid grid-cols-6 gap-3">
+                            <div className='col-span-1 py-2'>
+                                <div className="bg-white p-2 max-h-14 border text-primary border-primary w-full rounded-xl aspect-square flex justify-center items-center">
+                                    <AiOutlineDownload size={"100%"}></AiOutlineDownload>
+                                </div>
+                            </div>
+                            <Link to={"/donate"} className='col-span-5 py-2'>
+                                <div className="text-white border bg-primary w-full rounded-xl h-full flex justify-center items-center">Donasi Sekarang</div>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="my-2">
-                <p className='text-gray text-sm'>dari Rp3.000.000</p>
-                <p className='font-medium'>terkumpul <span className='text-primary'>Rp1.500.000</span></p>
-                <div className="my-2 w-full h-2 bg-[#ddd] rounded-full overflow-hidden">
-                    <div className="h-2 w-[25%] bg-success"></div>
-                </div>
-            </div>
-            <div className="my-4">
-                <h1>Deskripsi</h1>
-                <p className='text-gray text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore consequatur est iure, eos illo quisquam perferendis minus. Atque asperiores error, earum laboriosam dolor illo rerum eaque soluta optio perspiciatis?</p>
-            </div>
-        </div>
-    </div>)
+                    <div className="my-4">
+                        <h1>Deskripsi</h1>
+                        <p className='text-gray text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore consequatur est iure, eos illo quisquam perferendis minus. Atque asperiores error, earum laboriosam dolor illo rerum eaque soluta optio perspiciatis?</p>
+                    </div>
+        </div>)
 }
 
 const ResearcherInfo = () => {
@@ -154,10 +169,10 @@ const DonaturList = () => {
 
 const Footer = () => {
     return (
-        <div className='fixed border-2 bottom-0 bg-white w-full rounded-xl py-1'>
+        <div className='fixed sm:hidden border-2 bottom-0 bg-white w-full rounded-xl py-1'>
             <div className="grid grid-cols-6 mx-6 gap-3">
                 <div className='col-span-1 py-2'>
-                    <div className="bg-white p-2 border text-primary border-primary w-full rounded-xl aspect-square flex justify-center items-center">
+                    <div className="bg-white p-2 max-h-14 border text-primary border-primary w-full rounded-xl aspect-square flex justify-center items-center">
                         <AiOutlineDownload size={"100%"}></AiOutlineDownload>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 "use client";
-import ButtonNav from '../../components/ButtonNav';
 import DashboardTemplate from '../../templates/DashboardTemplate'
 import { Table } from "flowbite-react";
 import { IoMdDownload } from "react-icons/io";

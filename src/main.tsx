@@ -38,6 +38,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           element={
             <ProjectDetail>
               <ProjectDetail.Content />
+              <ProjectDetail.ResearcherInfo />
+              <ProjectDetail.RelevantProject />
+              <ProjectDetail.Footer />
             </ProjectDetail>
           }
         />
