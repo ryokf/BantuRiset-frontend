@@ -19,6 +19,8 @@ import EditPassword from './pages/profile/EditPassword.tsx';
 import Appearance from './pages/profile/Appearance.tsx';
 import ResearcherDashboard from './pages/researcher/ResearcherDashboard.tsx';
 import CreateProject from './pages/project/CreateProject.tsx';
+import ProposalList from './pages/Admin/ProposalList.tsx';
+import UserList from './pages/Admin/UserList.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -48,6 +50,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/profile/edit" element={<EditProfile />} />
         <Route path="/profile/edit-password" element={<EditPassword />} />
         <Route path="/profile/appearance" element={<Appearance />} />
+        <Route path="/admin/proposal" element={<ProposalList/>} />
+        <Route path="/admin/user" element={<UserList/>} />
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
     </BrowserRouter>
