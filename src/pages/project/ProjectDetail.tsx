@@ -9,25 +9,34 @@ import { Link } from 'react-router-dom';
 import { BsBarChartSteps } from "react-icons/bs";
 // import { HiOutlineExclamationCircle } from "react-icons/hi";
 import ProjectAction from '../../components/ProjectAction';
+import Navbar from '../../components/Navbar';
+import { Footer as FooterComp } from '../../components/Footer';
 
 const ProjectDetail = ({ children }: { children?: React.ReactNode }) => {
 
     return (
         <HomeTemplate className=''>
-            <Navbar2 title='Project' actionButton={<ProjectAction />}></Navbar2>
-            {children}
+            <Navbar2 title='Project' className='landscape:hidden' actionButton={<ProjectAction />}></Navbar2>
+            <Navbar className='hidden landscape:block'></Navbar>
+            <div className="w-11/12 lg:w-3/4 xl:w-1/2 m-auto">
+                {children}
+            </div>
+            <div className="hidden sm:block">
+                <FooterComp/>
+            </div>
+            <Footer></Footer>
         </HomeTemplate >
     )
 }
 
 const Content = () => {
     return (
-        <div className="mt-10 w-11/12 m-auto">
-            <div className="my-6 grid md:grid-cols-2 gap-4 m-auto">
+        <div className="mt-10 ">
+            <div className="my-6 landscape:my-0 grid md:grid-cols-2 xl:grid-cols- gap-4 lg:gap-8 m-auto">
                 <div className="rounded-xl overflow-hidden m-auto max-w-2xl mb-6 col-span-1 flex items-start">
-                    <img className='md:aspect-square object-cover' src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                    <img className='object-cover' src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                 </div>
-                <div className="col-span-1 flex-col justify-center">
+                <div className="col-span-1 flex-col justify-center landscape:mt-4">
                     <Badge color={'blue'} className='w-20 justify-center'>Physics</Badge>
                     <h1 className='text-xl font-medium my-2'>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
                     <div className="grid w-full grid-cols-1 md:grid-cols-">
@@ -47,7 +56,7 @@ const Content = () => {
                             <div className="h-2 w-[25%] bg-success"></div>
                         </div>
                     </div>
-                    <div className="">
+                    <div className="hidden md:block">
                         <div className="w-80 grid grid-cols-6 gap-3">
                             <div className='col-span-1 py-2'>
                                 <div className="bg-white p-2 max-h-14 border text-primary border-primary w-full rounded-xl aspect-square flex justify-center items-center">
@@ -61,16 +70,16 @@ const Content = () => {
                     </div>
                 </div>
             </div>
-                    <div className="my-4">
-                        <h1>Deskripsi</h1>
-                        <p className='text-gray text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore consequatur est iure, eos illo quisquam perferendis minus. Atque asperiores error, earum laboriosam dolor illo rerum eaque soluta optio perspiciatis?</p>
-                    </div>
+            <div className="">
+                <h1 className='md:text-xl font-medium'>Deskripsi</h1>
+                <p className='text-gray text-sm mt-1'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque dolore consequatur est iure, eos illo quisquam perferendis minus. Atque asperiores error, earum laboriosam dolor illo rerum eaque soluta optio perspiciatis?</p>
+            </div>
         </div>)
 }
 
 const ResearcherInfo = () => {
     return (
-        <div className="flex gap-2 w-10/12 m-auto items-center my-4">
+        <div className="flex gap-2 lg:gap-4 m-auto items-center my-4 landscape:my-8">
             <div className="rounded-full w-20 aspect-square bg-gray">
                 <img src="" alt="" />
             </div>
@@ -122,7 +131,7 @@ const ReportProgress = () => {
 
 const RelevantProject = () => {
     return (
-        <div className="mt-4 mb-20 w-11/12 m-auto">
+        <div className="mt-4 mb-20 m-auto">
             <h1 className='text-xl mx-2 font-medium mb-2'>Riset Terkait</h1>
             <div className="flex overflow-scroll">
                 <div className="min-w-fit mx-2">
@@ -185,7 +194,7 @@ const Footer = () => {
 }
 
 ProjectDetail.Content = Content
-ProjectDetail.Footer = Footer
+// ProjectDetail.Footer = Footer
 ProjectDetail.DonaturList = DonaturList
 ProjectDetail.RelevantProject = RelevantProject
 ProjectDetail.ReportProgress = ReportProgress
