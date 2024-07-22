@@ -6,17 +6,20 @@ import { useState } from "react";
 import login from "../../services/Auth/login";
 
 const LoginPage = () => {
-    const [data, setData] = useState({username : '', password : ''})
+    const [data, setData] = useState({email : '', password : ''})
 
     console.log(data)
 
     const loginHandle = async (e : ({ preventDefault: () => void })) => {
+        e.preventDefault()
+        console.log('halo')
         try {
-            e.preventDefault()
-            const res = await login(data.username, data.password)
+            const res = await login(data.email, data.password)
+            console.log('berhasil')
             console.log(await res)
-            window.location.href = res ? "/" : "/login"
+            // window.location.href = res ? "/" : "/login"
         } catch (e) {
+            console.log('error')
             console.log(e)
         }
     }
@@ -29,7 +32,7 @@ const LoginPage = () => {
                         <div className="mb-2 block">
                             <Label htmlFor="email1" value="Email" />
                         </div>
-                        <TextInput onChange={(e) => setData({...data, username : e.target.value})} icon={HiMail} id="email1" type="text" placeholder="name@banturiset.com" required />
+                        <TextInput onChange={(e) => setData({...data, email : e.target.value})} icon={HiMail} id="email1" type="text" placeholder="name@banturiset.com" required />
                     </div>
                     <div>
                         <div className="mb-2 block">

@@ -1,13 +1,13 @@
-
 import axios from 'axios';
 
-const login = async (username: string, password: string) => {
+const login = async (email: string, password: string) => {
     try {
-        const res = await axios.post('https://fakestoreapi.com/auth/login',
+        const res = await axios.post(
+            'http://103.63.25.209:8080/api/login',
             {
-                username,
+                email,
                 password
-            }
+            },
         )
 
         console.log(res)

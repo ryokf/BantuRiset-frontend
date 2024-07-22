@@ -17,7 +17,7 @@ import Notification from './pages/notif/Notification.tsx';
 import EditProfile from './pages/profile/EditProfile.tsx';
 import EditPassword from './pages/profile/EditPassword.tsx';
 import Appearance from './pages/profile/Appearance.tsx';
-import ResearcherDashboard from './pages/researcher/ResearcherDashboard.tsx';
+// import ResearcherDashboard from './pages/researcher/ResearcherDashboard.tsx';
 import CreateProject from './pages/project/CreateProject.tsx';
 import ProposalList from './pages/Admin/ProposalList.tsx';
 import UserList from './pages/Admin/UserList.tsx';
@@ -40,14 +40,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               <ProjectDetail.Content />
               <ProjectDetail.ResearcherInfo />
               <ProjectDetail.RelevantProject />
-              <ProjectDetail.Footer />
             </ProjectDetail>
           }
         />
         <Route path="/project/create" element={<CreateProject />} />
         <Route path="/donate" element={<DonateProject />} />
-        <Route path="/dashboard" element={<ResearcherDashboard />} />
         <Route path="/dashboard" element={<InvestorDashboard />} />
+        {/* <Route path="/dashboard" element={<ResearcherDashboard />} /> */}
         <Route path="/notification" element={<Notification />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<EditProfile />} />

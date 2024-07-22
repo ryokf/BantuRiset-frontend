@@ -5,9 +5,10 @@ import DashboardTemplate from '../../templates/DashboardTemplate';
 const DonaturDashboard = () => {
     return (
         <DashboardTemplate title="Dashboard">
-            <MainCard />
-            <Search />
-            <RecentWatch />
+                <MainCard />
+                <Search />
+                <RecentWatch />
+                <RecentWatch />
         </DashboardTemplate>
 
     )
@@ -15,28 +16,28 @@ const DonaturDashboard = () => {
 
 const MainCard = () => {
     return (
-        <div className="w-11/12 m-auto gradient-blue py-5 my-4 rounded-xl">
+        <div className="w-11/12 m-auto gradient-blue py-5 md:py-7 my-4 rounded-xl">
             <div className="flex items-center w-10/12 m-auto gap-4">
                 <div className="">
-                    <img src="" alt="" className='bg-gray w-16 rounded-full aspect-square' />
+                    <img src="" alt="" className='bg-gray w-16 md:w-20 rounded-full aspect-square' />
                 </div>
                 <div className="text-white">
-                    <h1 className='font-medium'>Ryo khrisna fitriawan</h1>
-                    <p className='text-sm opacity-75'>ryokhrisnaf@gmail.com</p>
+                    <h1 className='font-medium md:text-lg'>Ryo khrisna fitriawan</h1>
+                    <p className='text-sm md:text-base opacity-75'>ryokhrisnaf@gmail.com</p>
                 </div>
             </div>
             <div className="grid grid-cols-3 mt-4 mx-4 text-white">
                 <div className="flex flex-col items-center justify-center">
-                    <p className='text-xs'>donasi</p>
-                    <h1 className='text-sm'>Rp15.000.000</h1>
+                    <p className='text-xs md:text-sm'>donasi</p>
+                    <h1 className='text-sm md:text-base'>Rp15.000.000</h1>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                    <p className='text-xs'>berhasil</p>
-                    <h1 className='text-sm'>32</h1>
+                    <p className='text-xs md:text-sm'>berhasil</p>
+                    <h1 className='text-sm md:text-base'>32</h1>
                 </div>
                 <div className="flex flex-col items-center">
-                    <p className='text-xs'>gagal</p>
-                    <h1 className='text-sm'>2</h1>
+                    <p className='text-xs md:text-sm'>gagal</p>
+                    <h1 className='text-sm md:text-base'>2</h1>
                 </div>
             </div>
         </div>
