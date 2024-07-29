@@ -2,7 +2,9 @@
 import DashboardTemplate from '../../templates/DashboardTemplate'
 import { Table } from "flowbite-react";
 import { IoMdDownload } from "react-icons/io";
+import roleAuth from '../../helper/roleAuth';
 const ProposalList = () => {
+    roleAuth()
     return (
         <DashboardTemplate title='Admin' className=''>
             <ProjectList></ProjectList>
@@ -12,7 +14,7 @@ const ProposalList = () => {
 
 export function ProjectList() {
     return (
-        <div className=" w-11/12 m-auto !my-0">
+        <div className=" w-11/12 m-auto !my-2 min-h-96">
             <h1 className="my-4 font-medium text-lg">Proyek yang perlu anda review</h1>
             <div className="overflow-x-auto shadow !rounded-xl">
                 <Table hoverable>

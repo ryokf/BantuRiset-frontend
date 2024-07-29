@@ -2,27 +2,50 @@ import { Link } from "react-router-dom";
 import { FiSun } from "react-icons/fi";
 import { TbLetterCase } from "react-icons/tb";
 import DashboardTemplate from "../../templates/DashboardTemplate";
+import { useEffect, useState } from "react";
+import profile from "../../services/Auth/profile";
 
 const Profile = () => {
+    // const dataUser = JSON.parse(localStorage.getItem("user") || "{}");
+    const [dataUser, setDataUser] = useState({})
+
+    useEffect(() => {
+        if(localStorage.getItem("token") == undefined){
+            window.location.href = "/login"
+        }
+
+        const getProfile = async () => {
+            const token = localStorage.getItem("token") ?? ""
+            try{
+                const res = await profile(token)
+                setDataUser(res.data)
+            } catch(err) {
+                window.location.href = "/login"
+            }
+        }
+
+        getProfile()
+    }, [])
+
     return (
         <DashboardTemplate title="Profile">
-            <Main />
-            <BankAcc />
+            <Main dataUser={dataUser}/>
+            <BankAcc dataUser={dataUser}/>
             <Personalization />
             <div className="h-20"></div>
         </DashboardTemplate>
     )
 }
 
-const Main = () => {
+const Main = ({ dataUser }: { dataUser: any }) => {
     return (
         <div className="w-11/12 m-auto my-4">
             <div className="bg-white  rounded-xl">
                 <div className="bg-transparent h-fit py-4">
-                    <img src="https://flowbite.com/docs/images/blog/image-1.jpg" className="w-32 rounded-full aspect-square m-auto" alt="" />
+                    <img src={`https://ui-avatars.com/api/?name=${dataUser?.FName}` }className="w-32 rounded-full aspect-square m-auto" alt="" />
                     <div className="text-center">
-                        <h1 className="text-lg font-medium mt-2">Ryo khrisna fitriawan</h1>
-                        <p className="text-gray text-sm">ryokhrisnaf@gmail.com</p>
+                        <h1 className="text-lg font-medium mt-2">{dataUser?.FName}</h1>
+                        <p className="text-gray text-sm">{dataUser?.Email}</p>
                     </div>
                     <div className="mx-6 mt-8 font-light">
                         <Link to={"/profile/edit"} className="my-3 block">ubah profil</Link>
@@ -37,15 +60,15 @@ const Main = () => {
     )
 }
 
-const BankAcc = () => {
+const BankAcc = ({dataUser}: {dataUser: any}) => {
     return (
         <div className="w-11/12 m-auto">
             <h1 className="mx-2 text-sm text-gray my-1">info rekening</h1>
             <div className="bg-white rounded-xl w-full flex gap-4 p-4">
                 <img src="/brilogo.png" className="w-10 object-cover" alt="" />
                 <div className="">
-                    <h1 className="text-sm uppercase">Ryo khrisna fitriawan</h1>
-                    <p className="text-xs text-gray">080797707012</p>
+                    <h1 className="text-sm uppercase">{dataUser?.FName}</h1>
+                    <p className="text-xs text-gray">{dataUser?.NoRek}</p>
                 </div>
             </div>
         </div>

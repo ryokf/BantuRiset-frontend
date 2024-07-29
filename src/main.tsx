@@ -17,10 +17,11 @@ import Notification from './pages/notif/Notification.tsx';
 import EditProfile from './pages/profile/EditProfile.tsx';
 import EditPassword from './pages/profile/EditPassword.tsx';
 import Appearance from './pages/profile/Appearance.tsx';
-// import ResearcherDashboard from './pages/researcher/ResearcherDashboard.tsx';
 import CreateProject from './pages/project/CreateProject.tsx';
 import ProposalList from './pages/Admin/ProposalList.tsx';
 import UserList from './pages/Admin/UserList.tsx';
+import roleAuth from './helper/roleAuth';
+import ResearcherDashboard from './pages/researcher/ResearcherDashboard';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -45,15 +46,22 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         />
         <Route path="/project/create" element={<CreateProject />} />
         <Route path="/donate" element={<DonateProject />} />
-        <Route path="/dashboard" element={<InvestorDashboard />} />
-        {/* <Route path="/dashboard" element={<ResearcherDashboard />} /> */}
+
+        if (roleAuth() == '1') {
+          <Route path="/dashboard" element={<ProposalList />} />
+        }else if (roleAuth() == '2') {
+          <Route path="/dashboard" element={<InvestorDashboard />} />
+        }else if (roleAuth() == '3') {
+          <Route path="/dashboard" element={<ResearcherDashboard/>} />
+        }
+
         <Route path="/notification" element={<Notification />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/edit" element={<EditProfile />} />
         <Route path="/profile/edit-password" element={<EditPassword />} />
         <Route path="/profile/appearance" element={<Appearance />} />
-        <Route path="/admin/proposal" element={<ProposalList/>} />
-        <Route path="/admin/user" element={<UserList/>} />
+        <Route path="/admin/proposal" element={<ProposalList />} />
+        <Route path="/admin/user" element={<UserList />} />
         <Route path="*" element={<h1>not found</h1>} />
       </Routes>
     </BrowserRouter>

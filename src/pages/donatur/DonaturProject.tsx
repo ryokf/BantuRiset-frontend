@@ -13,7 +13,7 @@ const DonaturProject = () => {
                 <ButtonBadge title='berhasil' isTrue={false}></ButtonBadge>
                 <ButtonBadge title='gagal' isTrue={false}></ButtonBadge>
             </div>
-            <div className="my-4 mx-6 grid grid-cols-1 gap-4">
+            <div className="my-4 mx-6 grid grid-cols-1 items-center gap-4">
                 <Card></Card>
                 <Card></Card>
                 <Card></Card>

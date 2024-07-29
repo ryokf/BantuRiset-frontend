@@ -12,7 +12,7 @@ const DashboardTemplate = ({ children, className, title }: { children?: React.Re
           <SideNav></SideNav>
         </div>
         <div className="col-span-3 md:w-full md:m-auto md:bg-white md:rounded-xl">
-        {children}
+          {children}
         </div>
       </div>
       <div className="landscape:hidden">

@@ -11,7 +11,7 @@ function Navbar({className} : {className?:string}) {
     const link = [
         {
             name: "Dashboard",
-            href: "#",
+            href: "/dashboard",
         },
         {
             name: "About",
