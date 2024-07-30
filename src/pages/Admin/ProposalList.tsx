@@ -1,10 +1,8 @@
 "use client";
+import { IoMdDownload } from 'react-icons/io';
 import DashboardTemplate from '../../templates/DashboardTemplate'
 import { Table } from "flowbite-react";
-import { IoMdDownload } from "react-icons/io";
-import roleAuth from '../../helper/roleAuth';
 const ProposalList = () => {
-    roleAuth()
     return (
         <DashboardTemplate title='Admin' className=''>
             <ProjectList></ProjectList>

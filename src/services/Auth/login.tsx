@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { jwtDecode } from 'jwt-decode';
 
 const login = async (email: string, password: string) => {
     try {
