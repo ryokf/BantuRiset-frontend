@@ -53,6 +53,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/dashboard" element={<InvestorDashboard />} />
         }else if (roleAuth() == '3') {
           <Route path="/dashboard" element={<ResearcherDashboard/>} />
+        }else {
+          <Route path="*" element={<h1>not found</h1>} />
         }
 
         <Route path="/notification" element={<Notification />} />
