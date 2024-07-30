@@ -3,7 +3,7 @@ import dashboardNav from '../data/dashboardNav';
 
 const BottomNav = () => {
 
-    const navlink = dashboardNav
+    const navlink = dashboardNav() || []
 
     console.log(window.location.pathname)
 

@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 
 const SideNav = () => {
 
-    const navlink = dashboardNav
+    const navlink = dashboardNav()
+
+    console.log(navlink)
 
     console.log(window.location.pathname)
     return (
