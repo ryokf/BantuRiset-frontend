@@ -1,6 +1,5 @@
 import AuthTemplate from '../../templates/AuthTemplate'
 import { Label, TextInput } from 'flowbite-react'
-import { HiKey, HiLocationMarker, HiMail, HiPhone, HiUser } from 'react-icons/hi'
 import Button from '../../components/Button'
 import register from '../../services/Auth/register'
 import { useState } from 'react'
