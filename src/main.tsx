@@ -17,7 +17,6 @@ import EditProfile from './pages/profile/EditProfile.tsx';
 import EditPassword from './pages/profile/EditPassword.tsx';
 import Appearance from './pages/profile/Appearance.tsx';
 import CreateProject from './pages/project/CreateProject.tsx';
-import ProposalList from './pages/Admin/ProposalList.tsx';
 import UserList from './pages/Admin/UserList.tsx';
 import MainDashboard from './pages/MainDashboard.tsx';
 

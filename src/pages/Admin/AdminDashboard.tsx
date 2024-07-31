@@ -1,5 +1,3 @@
-import React from 'react'
-import DashboardTemplate from '../../templates/DashboardTemplate'
 import ProposalList from './ProposalList'
 
 const AdminDashboard = () => {

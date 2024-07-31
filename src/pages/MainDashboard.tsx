@@ -1,5 +1,3 @@
-import { jwtDecode } from 'jwt-decode';
-import ProposalList from './Admin/ProposalList';
 import ResearcherDashboard from './researcher/ResearcherDashboard';
 import DonaturDashboard from './donatur/DonaturDashboard';
 import AdminDashboard from './Admin/AdminDashboard';
